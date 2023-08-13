@@ -43,3 +43,18 @@
 [submodule "site-lisp/pkg/hl-todo"]
 	path = site-lisp/pkg/hl-todo
 	url = https://github.com/tarsius/hl-todo
+[submodule "site-lisp/pkg/anzu"]
+	path = site-lisp/pkg/anzu
+	url = https://github.com/emacsorphanage/anzu
+[submodule "site-lisp/pkg/which-key"]
+	path = site-lisp/pkg/which-key
+	url = https://github.com/justbur/emacs-which-key
+[submodule "site-lisp/pkg/ctrlf"]
+	path = site-lisp/pkg/ctrlf
+	url = https://github.com/radian-software/ctrlf.git
+[submodule "site-lisp/pkg/winum"]
+	path = site-lisp/pkg/winum
+	url = https://github.com/deb0ch/emacs-winum.git
+[submodule "site-lisp/pkg/dash"]
+	path = site-lisp/pkg/dash
+	url = https://github.com/magnars/dash.el.git

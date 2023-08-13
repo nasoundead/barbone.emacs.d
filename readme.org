@@ -1,6 +1,19 @@
 * my bare-bones emacs config
 
+** installations
+
+#+begin_src shell
+
+  mv ~/.emacs.d ~/.emacs.d_bak
+  git clone https://github.com/nasoundead/barbone.emacs.d.git .emacs.d
+  cd ~/.emacs.d
+  git submodule update --init --recursive
+
+#+end_src
+
 ** git submodules
+
+#+begin_src shell
 
 git submodule add https://github.com/emacscollective/epkg site-lisp/pkg/epkg
 git submodule add https://github.com/emacscollective/borg site-lisp/pkg/borg
@@ -16,3 +29,10 @@ git submodule add https://github.com/mickeynp/combobulate.git site-lisp/pkg/comb
 git submodule add https://github.com/nickmccurdy/add-hooks.git site-lisp/pkg/add-hooks
 git submodule add https://github.com/minad/goggles site-lisp/pkg/goggles
 git submodule add https://github.com/tarsius/hl-todo site-lisp/pkg/hl-todo
+git submodule add https://github.com/emacsorphanage/anzu site-lisp/pkg/anzu
+git submodule add https://github.com/justbur/emacs-which-key site-lisp/pkg/which-key
+git submodule add https://github.com/radian-software/ctrlf.git site-lisp/pkg/ctrlf
+git submodule add https://github.com/deb0ch/emacs-winum.git site-lisp/pkg/winum
+git submodule add https://github.com/magnars/dash.el.git site-lisp/pkg/dash
+
+#+end_src
