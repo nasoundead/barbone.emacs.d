@@ -34,5 +34,11 @@ git submodule add https://github.com/justbur/emacs-which-key site-lisp/pkg/which
 git submodule add https://github.com/radian-software/ctrlf.git site-lisp/pkg/ctrlf
 git submodule add https://github.com/deb0ch/emacs-winum.git site-lisp/pkg/winum
 git submodule add https://github.com/magnars/dash.el.git site-lisp/pkg/dash
+git submodule add https://github.com/minad/vertico site-lisp/pkg/vertico
+git submodule add https://github.com/oantolin/orderless site-lisp/pkg/orderless
+git submodule add https://github.com/minad/marginalia.git site-lisp/pkg/marginalia
+git submodule add https://github.com/minad/consult.git site-lisp/pkg/consult
+git submodule add https://github.com/oantolin/embark.git site-lisp/pkg/embark
+git submodule add https://github.com/karthink/consult-dir site-lisp/pkg/consult-dir
 
 #+end_src

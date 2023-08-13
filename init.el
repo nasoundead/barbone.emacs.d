@@ -4,6 +4,7 @@
 (require 'init-ui)
 (require 'init-mode)
 (require 'init-treesit)
+(require 'init-minibuffer)
 
 
 

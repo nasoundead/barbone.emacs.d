@@ -58,3 +58,21 @@
 [submodule "site-lisp/pkg/dash"]
 	path = site-lisp/pkg/dash
 	url = https://github.com/magnars/dash.el.git
+[submodule "site-lisp/pkg/vertico"]
+	path = site-lisp/pkg/vertico
+	url = https://github.com/minad/vertico
+[submodule "site-lisp/pkg/orderless"]
+	path = site-lisp/pkg/orderless
+	url = https://github.com/oantolin/orderless
+[submodule "site-lisp/pkg/marginalia"]
+	path = site-lisp/pkg/marginalia
+	url = https://github.com/minad/marginalia.git
+[submodule "site-lisp/pkg/consult"]
+	path = site-lisp/pkg/consult
+	url = https://github.com/minad/consult.git
+[submodule "site-lisp/pkg/embark"]
+	path = site-lisp/pkg/embark
+	url = https://github.com/oantolin/embark.git
+[submodule "site-lisp/pkg/consult-dir"]
+	path = site-lisp/pkg/consult-dir
+	url = https://github.com/karthink/consult-dir
