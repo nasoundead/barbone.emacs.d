@@ -1,0 +1,45 @@
+[submodule "site-lisp/pkg/epkg"]
+	path = site-lisp/pkg/epkg
+	url = https://github.com/emacscollective/epkg
+[submodule "site-lisp/pkg/borg"]
+	path = site-lisp/pkg/borg
+	url = https://github.com/emacscollective/borg
+[submodule "site-lisp/pkg/lazy-load"]
+	path = site-lisp/pkg/lazy-load
+	url = https://github.com/manateelazycat/lazy-load.git
+[submodule "site-lisp/pkg/one-key"]
+	path = site-lisp/pkg/one-key
+	url = https://github.com/manateelazycat/one-key.git
+[submodule "site-lisp/pkg/doom-themes"]
+	path = site-lisp/pkg/doom-themes
+	url = https://github.com/doomemacs/themes.git
+[submodule "site-lisp/pkg/beacon"]
+	path = site-lisp/pkg/beacon
+	url = https://github.com/Malabarba/beacon.git
+[submodule "site-lisp/pkg/org-modern"]
+	path = site-lisp/pkg/org-modern
+	url = https://github.com/minad/org-modern
+[submodule "site-lisp/pkg/valign"]
+	path = site-lisp/pkg/valign
+	url = https://github.com/casouri/valign
+[submodule "site-lisp/pkg/gcmh"]
+	path = site-lisp/pkg/gcmh
+	url = https://github.com/emacsmirror/gcmh
+[submodule "site-lisp/pkg/compat"]
+	path = site-lisp/pkg/compat
+	url = https://github.com/emacs-compat/compat
+[submodule "site-lisp/pkg/treesit-auto"]
+	path = site-lisp/pkg/treesit-auto
+	url = https://github.com/renzmann/treesit-auto.git
+[submodule "site-lisp/pkg/combobulate"]
+	path = site-lisp/pkg/combobulate
+	url = https://github.com/mickeynp/combobulate.git
+[submodule "site-lisp/pkg/add-hooks"]
+	path = site-lisp/pkg/add-hooks
+	url = https://github.com/nickmccurdy/add-hooks.git
+[submodule "site-lisp/pkg/goggles"]
+	path = site-lisp/pkg/goggles
+	url = https://github.com/minad/goggles
+[submodule "site-lisp/pkg/hl-todo"]
+	path = site-lisp/pkg/hl-todo
+	url = https://github.com/tarsius/hl-todo

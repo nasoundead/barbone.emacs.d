@@ -1,0 +1,18 @@
+* my bare-bones emacs config
+
+** git submodules
+
+git submodule add https://github.com/emacscollective/epkg site-lisp/pkg/epkg
+git submodule add https://github.com/emacscollective/borg site-lisp/pkg/borg
+git submodule add https://github.com/manateelazycat/one-key.git site-lisp/pkg/one-key
+git submodule add https://github.com/doomemacs/themes.git site-lisp/pkg/doom-themes
+git submodule add https://github.com/Malabarba/beacon.git site-lisp/pkg/beacon
+git submodule add https://github.com/minad/org-modern site-lisp/pkg/org-modern
+git submodule add https://github.com/casouri/valign site-lisp/pkg/valign
+git submodule add https://github.com/emacsmirror/gcmh site-lisp/pkg/gcmh
+git submodule add https://github.com/emacs-compat/compat site-lisp/pkg/compat
+git submodule add https://github.com/renzmann/treesit-auto.git site-lisp/pkg/treesit-auto
+git submodule add https://github.com/mickeynp/combobulate.git site-lisp/pkg/combobulate
+git submodule add https://github.com/nickmccurdy/add-hooks.git site-lisp/pkg/add-hooks
+git submodule add https://github.com/minad/goggles site-lisp/pkg/goggles
+git submodule add https://github.com/tarsius/hl-todo site-lisp/pkg/hl-todo
