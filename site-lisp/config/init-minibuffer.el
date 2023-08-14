@@ -23,21 +23,24 @@
 
 (defmacro +no-consult-preview (&rest cmds)
       `(with-eval-after-load 'consult
-         (consult-customize ,@cmds :preview-key "M-P")))
+         (consult-customize ,@cmds 
+          :preview-key "M-."
+          ;; :preview-key '(:debounce 0.4 any) ;; Option 1: Delay preview
+          )))
 
-    (+no-consult-preview
-     consult-ripgrep
-     consult-git-grep consult-grep
-     consult-bookmark consult-recent-file consult-xref
-     consult--source-recent-file consult--source-project-recent-file consult--source-bookmark)
+(+no-consult-preview
+  consult-ripgrep
+  consult-git-grep consult-grep
+  consult-bookmark consult-recent-file consult-xref
+  consult--source-recent-file consult--source-project-recent-file consult--source-bookmark)
 
-    (when (and (executable-find "rg"))
-      (defun +consult-ripgrep-at-point (&optional dir initial)
-        (interactive (list prefix-arg (when-let ((s (symbol-at-point)))
-                                        (symbol-name s))))
-        (consult-ripgrep dir initial))
-      (+no-consult-preview +consult-ripgrep-at-point)
-      (global-set-key (kbd "M-?") '+consult-ripgrep-at-point))
+(when (and (executable-find "rg"))
+  (defun +consult-ripgrep-at-point (&optional dir initial)
+    (interactive (list prefix-arg (when-let ((s (symbol-at-point)))
+                                    (symbol-name s))))
+    (consult-ripgrep dir initial))
+  (+no-consult-preview +consult-ripgrep-at-point)
+  (global-set-key (kbd "M-?") '+consult-ripgrep-at-point))
 
 (global-set-key [remap switch-to-buffer] 'consult-buffer)
 (global-set-key [remap switch-to-buffer-other-window] 'consult-buffer-other-window)

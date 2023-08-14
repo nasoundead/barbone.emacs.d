@@ -17,6 +17,7 @@
 
 git submodule add https://github.com/emacscollective/epkg site-lisp/pkg/epkg
 git submodule add https://github.com/emacscollective/borg site-lisp/pkg/borg
+git submodule add https://github.com/manateelazycat/lazy-load.git site-lisp/pkg/lazy-load
 git submodule add https://github.com/manateelazycat/one-key.git site-lisp/pkg/one-key
 git submodule add https://github.com/doomemacs/themes.git site-lisp/pkg/doom-themes
 git submodule add https://github.com/Malabarba/beacon.git site-lisp/pkg/beacon
@@ -33,6 +34,8 @@ git submodule add https://github.com/emacsorphanage/anzu site-lisp/pkg/anzu
 git submodule add https://github.com/justbur/emacs-which-key site-lisp/pkg/which-key
 git submodule add https://github.com/radian-software/ctrlf.git site-lisp/pkg/ctrlf
 git submodule add https://github.com/deb0ch/emacs-winum.git site-lisp/pkg/winum
+git submodule add https://github.com/abo-abo/avy.git site-lisp/pkg/avy
+git submodule add https://github.com/abo-abo/ace-window.git site-lisp/pkg/ace-window
 git submodule add https://github.com/magnars/dash.el.git site-lisp/pkg/dash
 git submodule add https://github.com/minad/vertico site-lisp/pkg/vertico
 git submodule add https://github.com/oantolin/orderless site-lisp/pkg/orderless

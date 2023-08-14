@@ -76,3 +76,9 @@
 [submodule "site-lisp/pkg/consult-dir"]
 	path = site-lisp/pkg/consult-dir
 	url = https://github.com/karthink/consult-dir
+[submodule "site-lisp/pkg/ace-window"]
+	path = site-lisp/pkg/ace-window
+	url = https://github.com/abo-abo/ace-window.git
+[submodule "site-lisp/pkg/avy"]
+	path = site-lisp/pkg/avy
+	url = https://github.com/abo-abo/avy.git
