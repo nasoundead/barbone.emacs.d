@@ -24,6 +24,12 @@
 (with-eval-after-load 'ace-window
     (setq aw-keys '(?a ?s ?d ?f ?g ?h ?j ?k ?l)))
 ;; (global-set-key (kbd "M-o") 'ace-window)
+(lazy-load-global-keys
+ '(("C-:" . avy-goto-char)
+   ("C-'" . avy-goto-char-2)
+   ("M-g e" . avy-goto-word-0)
+   ("M-g f" . avy-goto-line))
+ "avy")
 
 
 (provide 'init-ui)
