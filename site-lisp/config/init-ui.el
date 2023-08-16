@@ -19,17 +19,17 @@
 ;; Emacs goes to the load-path directory and finds the ace-window.el file, 
 ;; loads the plugin and executes the ace-window function.
 (lazy-load-global-keys
- '(("M-o" . ace-window))
- "ace-window")
+  '(("M-o" . ace-window))
+  "ace-window")
 (with-eval-after-load 'ace-window
     (setq aw-keys '(?a ?s ?d ?f ?g ?h ?j ?k ?l)))
 ;; (global-set-key (kbd "M-o") 'ace-window)
 (lazy-load-global-keys
- '(("C-:" . avy-goto-char)
-   ("C-'" . avy-goto-char-2)
-   ("M-g e" . avy-goto-word-0)
-   ("M-g f" . avy-goto-line))
- "avy")
+  '(("C-:" . avy-goto-char)
+    ("C-'" . avy-goto-char-2)
+    ("M-g w" . avy-goto-word-0)
+    ("M-g l" . avy-goto-line))
+  "avy")
 
 
 (provide 'init-ui)

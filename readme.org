@@ -43,5 +43,7 @@ git submodule add https://github.com/minad/marginalia.git site-lisp/pkg/marginal
 git submodule add https://github.com/minad/consult.git site-lisp/pkg/consult
 git submodule add https://github.com/oantolin/embark.git site-lisp/pkg/embark
 git submodule add https://github.com/karthink/consult-dir site-lisp/pkg/consult-dir
+git submodule add https://github.com/minad/corfu.git site-lisp/pkg/corfu
+git submodule add https://github.com/remyferre/comment-dwim-2.git site-lisp/pkg/comment-dwim-2
 
 #+end_src

@@ -12,8 +12,7 @@
 
   (normal-top-level-add-subdirs-to-load-path)
   (require 'init-pkgm)
-  (require 'init-better-default)
   (require 'lazy-load)
   (require 'one-key)
-  
+  (require 'init-better-default)
 )

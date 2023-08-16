@@ -82,3 +82,9 @@
 [submodule "site-lisp/pkg/avy"]
 	path = site-lisp/pkg/avy
 	url = https://github.com/abo-abo/avy.git
+[submodule "site-lisp/pkg/comment-dwim-2"]
+	path = site-lisp/pkg/comment-dwim-2
+	url = https://github.com/remyferre/comment-dwim-2.git
+[submodule "site-lisp/pkg/corfu"]
+	path = site-lisp/pkg/corfu
+	url = https://github.com/minad/corfu.git

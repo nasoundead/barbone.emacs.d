@@ -5,6 +5,7 @@
 (require 'init-mode)
 (require 'init-treesit)
 (require 'init-minibuffer)
+(require 'init-corfu)
 
 
 
