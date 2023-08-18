@@ -88,3 +88,9 @@
 [submodule "site-lisp/pkg/corfu"]
 	path = site-lisp/pkg/corfu
 	url = https://github.com/minad/corfu.git
+[submodule "site-lisp/pkg/kind-icon"]
+	path = site-lisp/pkg/kind-icon
+	url = https://github.com/jdtsmith/kind-icon.git
+[submodule "site-lisp/pkg/corfu-doc"]
+	path = site-lisp/pkg/corfu-doc
+	url = https://github.com/galeo/corfu-doc.git
