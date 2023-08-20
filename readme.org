@@ -53,5 +53,6 @@ git submodule add https://github.com/AndreaCrotti/yasnippet-snippets site-lisp/p
 git submodule add https://github.com/remyferre/comment-dwim-2.git site-lisp/pkg/comment-dwim-2
 git submodule add https://github.com/magnars/expand-region.el.git site-lisp/pkg/expand-region
 git submodule add https://github.com/magnars/multiple-cursors.el.git site-lisp/pkg/multiple-cursors
+git submodule add https://github.com/casouri/vundo.git site-lisp/pkg/vundo
 
 #+end_src

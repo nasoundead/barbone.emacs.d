@@ -204,6 +204,11 @@
 
 ;; (lazy-load-unset-keys '("C-x C-f" "C-z" "C-q" "s-W" "s-z" "M-h" "C-x C-c" "C-\\" "s-c" "s-x" "s-v"))
 
+;; undo
+(lazy-load-global-keys
+    '(("C-z" . vundo))
+    "vundo")
+
 ;; better comment
 (lazy-load-global-keys
     '(("M-;" . comment-dwim-2))
