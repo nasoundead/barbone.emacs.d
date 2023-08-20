@@ -1,4 +1,7 @@
-(require 'init-func)
+;; (require 'init-func)
+(lazy-load-global-keys
+ '(("C-d" . +duplicate-line))
+ "init-func")
 
 (require 'init-font)
 (require 'init-ui)

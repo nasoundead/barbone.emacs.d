@@ -31,6 +31,51 @@
 (setq scroll-step 0
       scroll-conservatively 1)
 
+;; coding
+(defun windows-shell-mode-coding ()
+    (set-buffer-file-coding-system 'gbk)
+    (set-buffer-process-coding-system 'gbk 'gbk))
+(defun python-encode-in-org-babel-execute (func body params)
+    (let ((coding-system-for-write 'utf-8))
+      (funcall func body params)))
+(cond
+ ((eq system-type 'windows-nt)
+  (set-language-environment "chinese-gbk")
+  (prefer-coding-system 'utf-8)
+  (set-terminal-coding-system 'gbk)
+  (modify-coding-system-alist 'process "*" 'gbk)
+  (add-hook 'shell-mode-hook #'windows-shell-mode-coding)
+  (add-hook 'inferior-python-mode-hook #'windows-shell-mode-coding)
+  (advice-add #'org-babel-execute:python :around
+              #'python-encode-in-org-babel-execute))
+ (t
+  (set-language-environment "UTF-8")
+  (prefer-coding-system 'utf-8)))
+
+;; Environment
+(when (or (eq system-type 'darwin) (eq system-type 'gnu/linux))
+  (use-package exec-path-from-shell
+    :init
+    (setq exec-path-from-shell-check-startup-files nil)
+    (setq exec-path-from-shell-variables '("PATH" "MANPATH" "PYTHONPATH" "GOPATH"))
+    (setq exec-path-from-shell-arguments '("-l"))
+    (exec-path-from-shell-initialize)))
+
+;; Key Modifiers
+(when (eq system-type 'windows-nt)
+  ;; make PC keyboard's Win key or other to type Super or Hyper, for emacs running on Windows.
+  (setq w32-pass-lwindow-to-system nil)
+  (setq w32-lwindow-modifier 'super) ; Left Windows key
+
+  (setq w32-pass-rwindow-to-system nil)
+  (setq w32-rwindow-modifier 'super) ; Right Windows key
+
+  (setq w32-pass-apps-to-system nil)
+
+  (setq w32-apps-modifier 'hyper)
+  (setq w32-rwindow-modifier 'hyper)
+  )
+
 ;; 关闭自动备份文件
 (setq make-backup-files nil)
 ;; 关闭启动页
@@ -161,12 +206,29 @@
 
 ;; better comment
 (lazy-load-global-keys
-      '(("M-;" . comment-dwim-2))
-      "comment-dwim-2")
+    '(("M-;" . comment-dwim-2))
+    "comment-dwim-2")
 (with-eval-after-load 'org-mode   
-      (lazy-load-local-keys
-            '(("M-;" . org-comment-dwim-2))
-            org-mode-map
-            "comment-dwim-2"))
+    (lazy-load-local-keys
+        '(("M-;" . org-comment-dwim-2))
+        org-mode-map
+        "comment-dwim-2"))
+
+;; expand region
+(lazy-load-global-keys
+    '(
+      ("C-w" . er/expand-region)
+      ("C-S-w" . er/contract-region)
+    )
+    "expand-region")
+
+;; multi-cursor
+(lazy-load-global-keys
+    '(
+      ("C-c C-<" . mc/mark-all-dwim)
+      ("C->" . mc/mark-next-like-this)
+      ("C-<" . mc/mark-previous-like-this)
+    )
+    "multiple-cursors")
 
 (provide 'init-better-default)

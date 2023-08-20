@@ -46,9 +46,11 @@
                         :weight 'normal
                         :size +evan/font-size))
 
+      
+
       (+evan/set-cn-fonts))))
 
-(setq +evan/en-font "Iosevka"
+(setq +evan/en-font "Iosevka"      ;"Iosevka"
       +evan/cn-font "Microsoft Yahei"
       +evan/font-size 15.0
       +evan/cn-font-size 15.0)
@@ -66,6 +68,28 @@
   (+evan/set-cn-fonts))
 
 (when (display-graphic-p)
-  (+evan/set-fonts))
+  (+evan/set-fonts)
+  ;; (setq fonts
+  ;;     (cond ((eq system-type 'darwin)     '("Monaco"    "STHeiti"))
+  ;;           ((eq system-type 'gnu/linux)  '("Ubuntu Mono"     "WenQuanYi Micro Hei Mono"))
+  ;;           ;; ((eq system-type 'windows-nt) '("JetBrains Mono"  "宋体"))
+  ;;           ;; ((eq system-type 'windows-nt) '("Monaco Nerd Font"  "Microsoft Yahei"))
+  ;;           ((eq system-type 'windows-nt) '("Iosevka"  "Microsoft Yahei"))
+  ;;           ;; ((eq system-type 'windows-nt) '("JetBrainsMono Nerd Font"  "宋体"))
+  ;;           ;; ((eq system-type 'windows-nt) '("Inconsolata NFM"  "宋体"))
+  ;;           ;; ;; ((eq system-type 'windows-nt) '("Source Code Pro"  "宋体"))
+  ;;           ;; ((eq system-type 'windows-nt) '("Cascadia Code"  "宋体"))
+  ;;           ;; ((eq system-type 'windows-nt) '("SauceCodePro Nerd Font"  "宋体"))
+  ;;           ))
+  ;; (set-face-attribute 'default nil :font
+  ;;                   (format "%s:pixelsize=%d" (car fonts) 16))
+  ;; (dolist (charset '(kana han symbol cjk-misc bopomofo))
+  ;;   (set-fontset-font (frame-parameter nil 'font) charset
+  ;;                     (font-spec :family (car (cdr fonts)))))
+  ;; ;; Fix chinese font width and rescale
+  ;; (setq face-font-rescale-alist '(("宋体". 1.0) ("Microsoft Yahei" . 1.2) ("WenQuanYi Micro Hei Mono" . 1.2) ("STHeiti". 1.2)))
+  ;; ;; (custom-set-faces
+  ;; ;;       '(org-table ((t (:family "Iosevka")))))
+)
 
 (provide 'init-font)

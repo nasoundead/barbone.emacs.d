@@ -39,8 +39,38 @@
             )
     corfu-map)
     
-
+    (require 'yasnippet)
+    (require 'cape)
 )
+
+;; cape
+(with-eval-after-load 'cape (progn
+    (require 'cape-keyword)
+    (setq cape-dict-file
+        (expand-file-name "site-lisp/dict/words" user-emacs-directory))
+    (add-hook 'protobuf-ts-mode-hook (lambda () (setq-local completion-at-point-functions #'cape-dabbrev)))
+    (add-hook 'thrift-mode-hook (lambda () (setq-local completion-at-point-functions #'cape-dabbrev)))
+    (add-hook 'text-mode-hook (lambda ()
+        (setq-local completion-at-point-functions (
+            list (cape-super-capf
+                    #'cape-dabbrev
+                    #'cape-dict)))))
+    (dolist (hook '(prog-mode-hook))
+            (add-hook hook (lambda ()
+                        (setq-local completion-at-point-functions
+                                (list (cape-super-capf
+                                #'cape-file
+                                ;; #'cape-yasnippet
+                                #'cape-history
+                                #'cape-keyword
+                                #'cape-symbol))))))))
+                                
+(defun +toggle/cape-dict ()
+  (interactive)
+  (require 'dash)
+  (if (--find (eq it 'cape-dict) completion-at-point-functions)
+      (setq-local completion-at-point-functions (-remove-item 'cape-dict completion-at-point-functions))
+    (add-to-list 'completion-at-point-functions 'cape-dict t)))
 
 ;; kind-icon
 (with-eval-after-load 'kind-icon (progn

@@ -46,6 +46,12 @@ git submodule add https://github.com/karthink/consult-dir site-lisp/pkg/consult-
 git submodule add https://github.com/minad/corfu.git site-lisp/pkg/corfu
 git submodule add https://github.com/galeo/corfu-doc.git site-lisp/pkg/corfu-doc
 git submodule add https://github.com/jdtsmith/kind-icon.git site-lisp/pkg/kind-icon
+git submodule add https://github.com/minad/cape.git site-lisp/pkg/cape
+git submodule add https://github.com/elken/yasnippet-capf.git site-lisp/pkg/yasnippet-capf
+git submodule add https://github.com/joaotavora/yasnippet site-lisp/pkg/yasnippet
+git submodule add https://github.com/AndreaCrotti/yasnippet-snippets site-lisp/pkg/yasnippet-snippets
 git submodule add https://github.com/remyferre/comment-dwim-2.git site-lisp/pkg/comment-dwim-2
+git submodule add https://github.com/magnars/expand-region.el.git site-lisp/pkg/expand-region
+git submodule add https://github.com/magnars/multiple-cursors.el.git site-lisp/pkg/multiple-cursors
 
 #+end_src
