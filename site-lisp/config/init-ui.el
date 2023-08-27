@@ -12,6 +12,7 @@
 (beacon-mode 1)
 
 ;; line number
+(setq display-line-numbers-width-start t)
 (add-hook 'prog-mode-hook #'display-line-numbers-mode)
 
 
@@ -30,6 +31,10 @@
     ("M-g w" . avy-goto-word-0)
     ("M-g l" . avy-goto-line))
   "avy")
+
+;; (require 'highlight-indent-guides)
+;; (setq highlight-indent-guides-method 'column)
+;; (add-hook 'prog-mode-hook 'highlight-indent-guides-mode)
 
 
 (provide 'init-ui)

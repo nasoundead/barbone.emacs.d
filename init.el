@@ -3,14 +3,22 @@
  '(("C-d" . +duplicate-line))
  "init-func")
 
-(require 'init-font)
 (require 'init-ui)
 (require 'init-mode)
+
+(when (display-graphic-p)
+  (require 'init-font)
+  (+evan/set-fonts)
+)
+
+
+(require 'init-flycheck)
+;; (require 'init-lsp-bridge)
+;; (require 'init-eglot)
+(require 'init-lsp)
 (require 'init-treesit)
 (require 'init-minibuffer)
 (require 'init-corfu)
-
-
 
 
 

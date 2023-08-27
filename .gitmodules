@@ -115,3 +115,24 @@
 [submodule "site-lisp/pkg/vundo"]
 	path = site-lisp/pkg/vundo
 	url = https://github.com/casouri/vundo.git
+[submodule "site-lisp/pkg/magit"]
+	path = site-lisp/pkg/magit
+	url = https://github.com/magit/magit.git
+[submodule "site-lisp/pkg/flycheck"]
+	path = site-lisp/pkg/flycheck
+	url = https://github.com/flycheck/flycheck
+[submodule "site-lisp/pkg/Highlight-Indentation"]
+	path = site-lisp/pkg/Highlight-Indentation
+	url = https://github.com/antonj/Highlight-Indentation-for-Emacs.git
+[submodule "site-lisp/pkg/highlight-indent-guides"]
+	path = site-lisp/pkg/highlight-indent-guides
+	url = https://github.com/DarthFennec/highlight-indent-guides.git
+[submodule "site-lisp/pkg/lsp-bridge"]
+	path = site-lisp/pkg/lsp-bridge
+	url = https://github.com/manateelazycat/lsp-bridge.git
+[submodule "site-lisp/pkg/markdown-mode"]
+	path = site-lisp/pkg/markdown-mode
+	url = https://github.com/jrblevin/markdown-mode.git
+[submodule "site-lisp/pkg/eglot"]
+	path = site-lisp/pkg/eglot
+	url = https://github.com/joaotavora/eglot.git

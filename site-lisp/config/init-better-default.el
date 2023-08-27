@@ -137,13 +137,16 @@
 	  (lambda ()
 	      ;; (yas-minor-mode t)
             ))
+
+(setq ediff-window-setup-function 'ediff-setup-windows-plain ;; Everything in a frame
+      ediff-split-window-function 'split-window-horizontally)
 (add-hook 'ediff-quit-hook #'winner-undo)
-(add-hook 'after-init-hook 
+(add-hook 'after-init-hook
       (lambda ()
             (recentf-mode t)
             (savehist-mode t)
             (save-place-mode t)
-            (winner-mode t)   ; C-c <left> : winner-undo, C-c <right> : winner-redo 
+            (winner-mode t)   ; C-c <left> : winner-undo, C-c <right> : winner-redo
             (global-auto-revert-mode t)
             (global-so-long-mode 1)
             (delete-selection-mode 1)
@@ -213,7 +216,7 @@
 (lazy-load-global-keys
     '(("M-;" . comment-dwim-2))
     "comment-dwim-2")
-(with-eval-after-load 'org-mode   
+(with-eval-after-load 'org-mode
     (lazy-load-local-keys
         '(("M-;" . org-comment-dwim-2))
         org-mode-map

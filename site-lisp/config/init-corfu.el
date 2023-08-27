@@ -27,7 +27,7 @@
     ;; corfu-doc
     (require 'corfu-doc)
 
-    (lazy-load-set-keys 
+    (lazy-load-set-keys
         '(("C-d" . corfu-doc-toggle)
             ("C-S-p" . corfu-doc-scroll-down)
             ("C-S-n" . corfu-doc-scroll-up)
@@ -38,8 +38,8 @@
             ([backtab] . corfu-previous)
             )
     corfu-map)
+
     
-    (require 'yasnippet)
     (require 'cape)
 )
 
@@ -64,7 +64,7 @@
                                 #'cape-history
                                 #'cape-keyword
                                 #'cape-symbol))))))))
-                                
+
 (defun +toggle/cape-dict ()
   (interactive)
   (require 'dash)

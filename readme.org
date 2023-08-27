@@ -54,5 +54,12 @@ git submodule add https://github.com/remyferre/comment-dwim-2.git site-lisp/pkg/
 git submodule add https://github.com/magnars/expand-region.el.git site-lisp/pkg/expand-region
 git submodule add https://github.com/magnars/multiple-cursors.el.git site-lisp/pkg/multiple-cursors
 git submodule add https://github.com/casouri/vundo.git site-lisp/pkg/vundo
+git submodule add https://github.com/magit/magit.git site-lisp/pkg/magit
+git submodule add https://github.com/flycheck/flycheck site-lisp/pkg/flycheck
+git submodule add https://github.com/DarthFennec/highlight-indent-guides.git site-lisp/pkg/highlight-indent-guides
+git submodule add https://github.com/jrblevin/markdown-mode.git site-lisp/pkg/markdown-mode
+git submodule add https://github.com/manateelazycat/lsp-bridge.git site-lisp/pkg/lsp-bridge
+git submodule add https://github.com/joaotavora/eglot.git site-lisp/pkg/eglot
+git submodule add https://github.com/emacs-lsp/lsp-mode.git site-lisp/pkg/lsp-mode
 
 #+end_src
