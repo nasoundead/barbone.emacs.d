@@ -136,3 +136,27 @@
 [submodule "site-lisp/pkg/eglot"]
 	path = site-lisp/pkg/eglot
 	url = https://github.com/joaotavora/eglot.git
+[submodule "site-lisp/pkg/origami"]
+	path = site-lisp/pkg/origami
+	url = https://github.com/gregsexton/origami.el.git
+[submodule "site-lisp/pkg/s"]
+	path = site-lisp/pkg/s
+	url = https://github.com/magnars/s.el.git
+[submodule "site-lisp/pkg/lsp-mode"]
+	path = site-lisp/pkg/lsp-mode
+	url = https://github.com/emacs-lsp/lsp-mode.git
+[submodule "site-lisp/pkg/f"]
+	path = site-lisp/pkg/f
+	url = https://github.com/rejeep/f.el.git
+[submodule "site-lisp/pkg/ht"]
+	path = site-lisp/pkg/ht
+	url = https://github.com/Wilfred/ht.el.git
+[submodule "site-lisp/pkg/hydra"]
+	path = site-lisp/pkg/hydra
+	url = https://github.com/abo-abo/hydra.git
+[submodule "site-lisp/pkg/spinner"]
+	path = site-lisp/pkg/spinner
+	url = https://github.com/Malabarba/spinner.el.git
+[submodule "site-lisp/pkg/lsp-pyright"]
+	path = site-lisp/pkg/lsp-pyright
+	url = https://github.com/emacs-lsp/lsp-pyright.git

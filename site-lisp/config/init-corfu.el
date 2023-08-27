@@ -39,7 +39,6 @@
             )
     corfu-map)
 
-    
     (require 'cape)
 )
 

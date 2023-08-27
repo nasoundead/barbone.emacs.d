@@ -133,10 +133,6 @@
 (global-whitespace-mode) ; Enable whitespace mode everywhere
 ; END TABS CONFIG
 
-(add-hook 'prog-mode-hook
-	  (lambda ()
-	      ;; (yas-minor-mode t)
-            ))
 
 (setq ediff-window-setup-function 'ediff-setup-windows-plain ;; Everything in a frame
       ediff-split-window-function 'split-window-horizontally)
@@ -238,5 +234,13 @@
       ("C-<" . mc/mark-previous-like-this)
     )
     "multiple-cursors")
+
+;; folding
+(lazy-load-global-keys
+    '(
+      ("C-c f" . origami-recursively-toggle-node)
+      ("C-c F" . origami-toggle-all-nodes)
+    )
+    "origami")
 
 (provide 'init-better-default)
