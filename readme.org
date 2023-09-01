@@ -61,6 +61,7 @@ git submodule add https://github.com/jrblevin/markdown-mode.git site-lisp/pkg/ma
 git submodule add https://github.com/manateelazycat/lsp-bridge.git site-lisp/pkg/lsp-bridge
 git submodule add https://github.com/joaotavora/eglot.git site-lisp/pkg/eglot
 git submodule add https://github.com/emacs-lsp/lsp-mode.git site-lisp/pkg/lsp-mode
+git submodule add https://github.com/emacs-lsp/lsp-ui.git site-lisp/pkg/lsp-ui
 git submodule add https://github.com/emacs-lsp/lsp-pyright.git site-lisp/pkg/lsp-pyright
 git submodule add https://github.com/magnars/s.el.git site-lisp/pkg/s
 git submodule add https://github.com/rejeep/f.el.git site-lisp/pkg/f

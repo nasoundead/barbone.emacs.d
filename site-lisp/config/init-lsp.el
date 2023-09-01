@@ -30,8 +30,7 @@
     (define-key lsp-mode-map [remap xref-find-definitions] 'lsp-find-definition)
     (define-key lsp-mode-map (kbd "M-?") 'xref-find-references)
     (define-key lsp-mode-map [remap xref-find-references] 'lsp-find-references)
-    
-    )
+)
 
 
 (setq lsp-keymap-prefix ""
@@ -44,13 +43,13 @@
     lsp-headerline-breadcrumb-enable nil
     lsp-inlay-hint-enable t
     lsp-log-io nil
-    lsp-completion-enable t
     lsp-lens-enable nil)
 ;; lsp fancy features
 (setq
     ;; ui
     lsp-progress-via-spinner nil
     ;; completion
+    lsp-completion-enable t
     lsp-completion-show-detail t
     lsp-completion-show-kind t
     lsp-completion-use-last-result t
@@ -61,7 +60,7 @@
 ;; lsp server config
 (setq tab-always-indent 'complete)
 (setq lsp-response-timeout 1)
-(setq lsp-prefer-capf :none)
+;; (setq lsp-prefer-capf :none)
 (setq lsp-completion-provider :none)
 
 (add-hook 'lsp-mode-hook
@@ -70,6 +69,7 @@
         (require 'lsp-completion)
         (setq-local completion-at-point-functions (list (lsp-completion-at-point)))
         (require 'lsp-modeline)
+        (require 'lsp-ui)
         ))
 
 ;;;###autoload

@@ -160,3 +160,6 @@
 [submodule "site-lisp/pkg/lsp-pyright"]
 	path = site-lisp/pkg/lsp-pyright
 	url = https://github.com/emacs-lsp/lsp-pyright.git
+[submodule "site-lisp/pkg/lsp-ui"]
+	path = site-lisp/pkg/lsp-ui
+	url = https://github.com/emacs-lsp/lsp-ui.git
