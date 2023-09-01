@@ -3,6 +3,7 @@
 	  (lambda ()
             (require 'flycheck)
             (require 'lsp-mode)
+            
             ))
 
 (require 'add-hooks)
@@ -29,6 +30,7 @@
     (define-key lsp-mode-map [remap xref-find-definitions] 'lsp-find-definition)
     (define-key lsp-mode-map (kbd "M-?") 'xref-find-references)
     (define-key lsp-mode-map [remap xref-find-references] 'lsp-find-references)
+    
     )
 
 
@@ -42,6 +44,7 @@
     lsp-headerline-breadcrumb-enable nil
     lsp-inlay-hint-enable t
     lsp-log-io nil
+    lsp-completion-enable t
     lsp-lens-enable nil)
 ;; lsp fancy features
 (setq
@@ -59,20 +62,29 @@
 (setq tab-always-indent 'complete)
 (setq lsp-response-timeout 1)
 (setq lsp-prefer-capf :none)
+(setq lsp-completion-provider :none)
 
 (add-hook 'lsp-mode-hook
     (lambda ()
-        (flycheck-mode)))
+        (flycheck-mode)
+        (require 'lsp-completion)
+        (setq-local completion-at-point-functions (list (lsp-completion-at-point)))
+        (require 'lsp-modeline)
+        ))
+
 ;;;###autoload
 (defun +lsp-mode-setup-completion ()
     (setf (alist-get 'styles (alist-get 'lsp-capf completion-category-defaults))
         '(orderless)))
+
+(add-hook 'lsp-completion-mode-hook
+    #'+lsp-mode-setup-completion)
+
 ;;;###autoload
 (defun +orderless-dispatch-flex-first (_pattern index _total)
     (and (eq index 0) 'orderless-flex))
-(add-hook 'lsp-completion-mode-hook
-    #'+lsp-mode-setup-completion)
 (add-hook 'orderless-style-dispatchers 
     #'+orderless-dispatch-flex-first nil 'local)
+
 
 (provide 'init-lsp)

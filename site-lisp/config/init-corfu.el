@@ -45,6 +45,7 @@
 ;; cape
 (with-eval-after-load 'cape (progn
     (require 'cape-keyword)
+    (require 'yasnippet-capf)
     (setq cape-dict-file
         (expand-file-name "site-lisp/dict/words" user-emacs-directory))
     (add-hook 'protobuf-ts-mode-hook (lambda () (setq-local completion-at-point-functions #'cape-dabbrev)))
@@ -59,7 +60,7 @@
                         (setq-local completion-at-point-functions
                                 (list (cape-super-capf
                                 #'cape-file
-                                ;; #'cape-yasnippet
+                                #'yasnippet-capf
                                 #'cape-history
                                 #'cape-keyword
                                 #'cape-symbol))))))))
