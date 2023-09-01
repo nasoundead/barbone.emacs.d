@@ -14,5 +14,6 @@
   (require 'init-pkgm)
   (require 'lazy-load)
   (require 'one-key)
+  (require 'init-project)
   (require 'init-better-default)
 )
