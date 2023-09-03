@@ -11,6 +11,19 @@
 
 #+end_src
 
+#+begin_src shell
+
+# fatal: remote error: upload-pack: not our ref
+cd {submodule path}
+git reset --hard origin/master
+cd -
+git clean -n
+git add {submodule path}
+git commit
+git submodule update --init --recursive
+
+#+end_src
+
 ** git submodules
 
 #+begin_src shell
@@ -56,7 +69,7 @@ git submodule add https://github.com/magnars/multiple-cursors.el.git site-lisp/p
 git submodule add https://github.com/casouri/vundo.git site-lisp/pkg/vundo
 git submodule add https://github.com/magit/magit.git site-lisp/pkg/magit
 git submodule add https://github.com/flycheck/flycheck site-lisp/pkg/flycheck
-git submodule add https://github.com/DarthFennec/highlight-indent-guides.git site-lisp/pkg/highlight-indent-guides
+git submodule add https://gitee.com/naso/highlight-indent-guides.git site-lisp/pkg/highlight-indent-guides
 git submodule add https://github.com/jrblevin/markdown-mode.git site-lisp/pkg/markdown-mode
 git submodule add https://github.com/manateelazycat/lsp-bridge.git site-lisp/pkg/lsp-bridge
 git submodule add https://github.com/joaotavora/eglot.git site-lisp/pkg/eglot

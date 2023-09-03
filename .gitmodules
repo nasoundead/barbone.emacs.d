@@ -126,7 +126,7 @@
 	url = https://github.com/antonj/Highlight-Indentation-for-Emacs.git
 [submodule "site-lisp/pkg/highlight-indent-guides"]
 	path = site-lisp/pkg/highlight-indent-guides
-	url = https://github.com/DarthFennec/highlight-indent-guides.git
+	url = https://gitee.com/naso/highlight-indent-guides.git
 [submodule "site-lisp/pkg/lsp-bridge"]
 	path = site-lisp/pkg/lsp-bridge
 	url = https://github.com/manateelazycat/lsp-bridge.git

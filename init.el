@@ -8,7 +8,6 @@
 
 (when (display-graphic-p)
   (require 'init-font)
-  (+evan/set-fonts)
 )
 
 (require 'init-flycheck)

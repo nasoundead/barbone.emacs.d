@@ -1,11 +1,11 @@
 ;; themes
 (require 'doom-themes)
 (setq +evan-theme (if (and (>= (string-to-number (format-time-string "%H")) 6)
-			       (>= (string-to-number (format-time-string "%H")) 18))
-			  'doom-one
-		      'doom-one-light))
-  (load-theme +evan-theme t nil)
-  (enable-theme +evan-theme)
+			                     (>= (string-to-number (format-time-string "%H")) 18))
+			                'modus-vivendi
+                    'modus-operandi))
+(load-theme +evan-theme t nil)
+(enable-theme +evan-theme)
 
 ;; beacon
 (require 'beacon)
@@ -24,17 +24,17 @@
   "ace-window")
 (with-eval-after-load 'ace-window
     (setq aw-keys '(?a ?s ?d ?f ?g ?h ?j ?k ?l)))
-;; (global-set-key (kbd "M-o") 'ace-window)
+
 (lazy-load-global-keys
-  '(("C-:" . avy-goto-char)
+  '(("C-;" . avy-goto-char)
     ("C-'" . avy-goto-char-2)
     ("M-g w" . avy-goto-word-0)
     ("M-g l" . avy-goto-line))
   "avy")
 
-;; (require 'highlight-indent-guides)
-;; (setq highlight-indent-guides-method 'column)
-;; (add-hook 'prog-mode-hook 'highlight-indent-guides-mode)
+(require 'highlight-indent-guides)
+(setq highlight-indent-guides-method 'column)
+(add-hook 'prog-mode-hook 'highlight-indent-guides-mode)
 
 
 (provide 'init-ui)
