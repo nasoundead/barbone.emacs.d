@@ -1,11 +1,12 @@
-;; (require 'init-func)
+(require 'init-project)
+(require 'init-better-default)
 (lazy-load-global-keys
  '(("C-d" . +duplicate-line))
  "init-func")
 
 (lazy-load-global-keys
   '(
-    ("C-c g g" . magit)
+    ("C-c g" . one-key-menu-magit)
   )
   "init-magit")
 

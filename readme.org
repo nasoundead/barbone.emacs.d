@@ -49,6 +49,7 @@ git submodule add https://github.com/emacscollective/epkg site-lisp/pkg/epkg
 git submodule add https://github.com/emacscollective/borg site-lisp/pkg/borg
 git submodule add https://github.com/manateelazycat/lazy-load.git site-lisp/pkg/lazy-load
 git submodule add https://github.com/manateelazycat/one-key.git site-lisp/pkg/one-key
+git submodule add https://github.com/bbatsov/projectile.git site-lisp/pkg/projectile
 git submodule add https://github.com/doomemacs/themes.git site-lisp/pkg/doom-themes
 git submodule add https://github.com/Malabarba/beacon.git site-lisp/pkg/beacon
 git submodule add https://github.com/minad/org-modern site-lisp/pkg/org-modern

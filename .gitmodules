@@ -172,3 +172,6 @@
 [submodule "site-lisp/pkg/diff-hl"]
 	path = site-lisp/pkg/diff-hl
 	url = https://github.com/dgutov/diff-hl
+[submodule "site-lisp/pkg/projectile"]
+	path = site-lisp/pkg/projectile
+	url = https://github.com/bbatsov/projectile.git
