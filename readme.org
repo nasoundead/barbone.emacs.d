@@ -85,8 +85,13 @@ git submodule add https://github.com/magnars/expand-region.el.git site-lisp/pkg/
 git submodule add https://github.com/magnars/multiple-cursors.el.git site-lisp/pkg/multiple-cursors
 git submodule add https://github.com/casouri/vundo.git site-lisp/pkg/vundo
 git submodule add https://github.com/magit/magit.git site-lisp/pkg/magit
+git submodule add https://github.com/magit/with-editor.git site-lisp/pkg/with-editor
+git submodule add https://github.com/magit/transient.git site-lisp/pkg/transient
+git submodule add https://github.com/dgutov/diff-hl site-lisp/pkg/diff-hl
 git submodule add https://github.com/flycheck/flycheck site-lisp/pkg/flycheck
 git submodule add https://gitee.com/naso/highlight-indent-guides.git site-lisp/pkg/highlight-indent-guides
+git submodule add https://github.com/Fanael/highlight-defined.git site-lisp/pkg/highlight-defined
+git submodule add https://github.com/Fanael/rainbow-delimiters.git site-lisp/pkg/rainbow-delimiters
 git submodule add https://github.com/jrblevin/markdown-mode.git site-lisp/pkg/markdown-mode
 git submodule add https://github.com/manateelazycat/lsp-bridge.git site-lisp/pkg/lsp-bridge
 git submodule add https://github.com/joaotavora/eglot.git site-lisp/pkg/eglot

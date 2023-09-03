@@ -160,3 +160,15 @@
 [submodule "site-lisp/pkg/lsp-ui"]
 	path = site-lisp/pkg/lsp-ui
 	url = https://github.com/emacs-lsp/lsp-ui.git
+[submodule "site-lisp/pkg/rainbow-delimiters"]
+	path = site-lisp/pkg/rainbow-delimiters
+	url = https://github.com/Fanael/rainbow-delimiters.git
+[submodule "site-lisp/pkg/highlight-defined"]
+	path = site-lisp/pkg/highlight-defined
+	url = https://github.com/Fanael/highlight-defined.git
+[submodule "site-lisp/pkg/with-editor"]
+	path = site-lisp/pkg/with-editor
+	url = https://github.com/magit/with-editor.git
+[submodule "site-lisp/pkg/diff-hl"]
+	path = site-lisp/pkg/diff-hl
+	url = https://github.com/dgutov/diff-hl

@@ -3,6 +3,13 @@
  '(("C-d" . +duplicate-line))
  "init-func")
 
+(lazy-load-global-keys
+  '(
+    ("C-c g g" . magit)
+    ("C-c g d" . +git-describe)
+  )
+  "init-magit")
+
 (require 'init-ui)
 (require 'init-mode)
 

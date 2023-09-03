@@ -1,5 +1,5 @@
 ;; themes
-(require 'doom-themes)
+;; (require 'doom-themes)
 (setq +evan-theme (if (and (>= (string-to-number (format-time-string "%H")) 6)
 			                     (>= (string-to-number (format-time-string "%H")) 18))
 			                'modus-vivendi
@@ -32,9 +32,20 @@
     ("M-g l" . avy-goto-line))
   "avy")
 
-(require 'highlight-indent-guides)
-(setq highlight-indent-guides-method 'column)
-(add-hook 'prog-mode-hook 'highlight-indent-guides-mode)
 
+(add-hook 'prog-mode-hook (lambda() 
+  (require 'highlight-indent-guides)
+  (setq highlight-indent-guides-method 'column)
+  (highlight-indent-guides-mode)
+
+  (require 'rainbow-delimiters)
+  (rainbow-delimiters-mode)
+  ))
+
+(add-hook 'emacs-lisp-mode-hook (lambda() 
+  (require 'highlight-defined)
+  (highlight-defined-mode)
+)
+)
 
 (provide 'init-ui)
