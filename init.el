@@ -6,7 +6,6 @@
 (lazy-load-global-keys
   '(
     ("C-c g g" . magit)
-    ("C-c g d" . +git-describe)
   )
   "init-magit")
 

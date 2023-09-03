@@ -244,10 +244,8 @@
     "origami")
 
 ;; diff-hl
-(add-hook 'prog-mode-hook 
-        (lambda ()
-            (require 'diff-hl)
-            (setq diff-hl-draw-borders nil)
-            (diff-hl-mode t)))
+(require 'diff-hl)
+(setq diff-hl-draw-borders nil)
+(add-hook 'prog-mode-hook 'diff-hl-mode)
 
 (provide 'init-better-default)

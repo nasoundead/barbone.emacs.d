@@ -18,12 +18,6 @@
       (list rev (cons "--diff-merges=on" args) files module)))
 (advice-add 'magit-show-commit :filter-args 'my-magit-show-commit-advice)
 
-;;;###autoload
-(defun +git-describe ()
-  (interactive)
-  (let ((result (string-trim (shell-command-to-string "git describe --match 'v[0-9]*' --dirty='.m' --always --tags --abbrev=8"))))
-    (kill-new result)))
-
 
 (with-eval-after-load 'diff-hl
     (add-hook 'magit-pre-refresh-hook 'diff-hl-magit-pre-refresh)
