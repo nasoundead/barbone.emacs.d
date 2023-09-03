@@ -175,3 +175,6 @@
 [submodule "site-lisp/pkg/projectile"]
 	path = site-lisp/pkg/projectile
 	url = https://github.com/bbatsov/projectile.git
+[submodule "site-lisp/pkg/blink-search"]
+	path = site-lisp/pkg/blink-search
+	url = https://github.com/manateelazycat/blink-search.git

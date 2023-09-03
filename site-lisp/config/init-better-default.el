@@ -248,4 +248,6 @@
 (setq diff-hl-draw-borders nil)
 (add-hook 'prog-mode-hook 'diff-hl-mode)
 
+
+
 (provide 'init-better-default)
