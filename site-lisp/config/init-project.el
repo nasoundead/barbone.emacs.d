@@ -32,6 +32,7 @@
 ;;;###autoload
 (defun +evan/project-magit ()
   (interactive)
+  (require 'magit)
   (magit-status (project-root (project-current nil))))
 
 ;;;###autoload
