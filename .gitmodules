@@ -178,3 +178,6 @@
 [submodule "site-lisp/pkg/blink-search"]
 	path = site-lisp/pkg/blink-search
 	url = https://github.com/manateelazycat/blink-search.git
+[submodule "site-lisp/pkg/posframe"]
+	path = site-lisp/pkg/posframe
+	url = https://github.com/tumashu/posframe.git

@@ -46,6 +46,7 @@
   (interactive)
   (let ((default-directory (project-root (project-current nil))))
     (require 'blink-search)
+    ;; (setq blink-search-enable-posframe t)
     (blink-search)))
 
 

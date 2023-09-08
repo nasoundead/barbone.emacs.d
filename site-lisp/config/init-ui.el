@@ -11,6 +11,9 @@
 (require 'beacon)
 (beacon-mode 1)
 
+;; posframe
+(require 'posframe)
+
 ;; line number
 (setq display-line-numbers-width-start t)
 (add-hook 'prog-mode-hook #'display-line-numbers-mode)
@@ -44,8 +47,6 @@
 
 (add-hook 'emacs-lisp-mode-hook (lambda() 
   (require 'highlight-defined)
-  (highlight-defined-mode)
-)
-)
+  (highlight-defined-mode)))
 
 (provide 'init-ui)

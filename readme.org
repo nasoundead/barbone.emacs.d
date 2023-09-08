@@ -106,5 +106,6 @@ git submodule add https://github.com/abo-abo/hydra.git site-lisp/pkg/hydra
 git submodule add https://github.com/Malabarba/spinner.el.git site-lisp/pkg/spinner
 git submodule add https://github.com/gregsexton/origami.el.git site-lisp/pkg/origami
 git submodule add https://github.com/manateelazycat/blink-search.git site-lisp/pkg/blink-search
+git submodule add https://github.com/tumashu/posframe.git site-lisp/pkg/posframe
 
 #+end_src
