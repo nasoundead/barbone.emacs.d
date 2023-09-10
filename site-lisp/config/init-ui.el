@@ -20,6 +20,10 @@
 ;; posframe
 (require 'posframe)
 
+;; modeline
+(require 'doom-modeline)
+(doom-modeline-mode 1)
+
 ;; line number
 (setq display-line-numbers-width-start t)
 (add-hook 'prog-mode-hook #'display-line-numbers-mode)

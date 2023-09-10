@@ -193,3 +193,12 @@
 [submodule "site-lisp/pkg/all-the-icons"]
 	path = site-lisp/pkg/all-the-icons
 	url = https://github.com/domtronn/all-the-icons.el.git
+[submodule "site-lisp/pkg/doom-modeline"]
+	path = site-lisp/pkg/doom-modeline
+	url = https://github.com/seagle0128/doom-modeline.git
+[submodule "site-lisp/pkg/shrink-path"]
+	path = site-lisp/pkg/shrink-path
+	url = https://github.com/emacsmirror/shrink-path.git
+[submodule "site-lisp/pkg/nerd-icons"]
+	path = site-lisp/pkg/nerd-icons
+	url = https://github.com/emacsmirror/nerd-icons.git

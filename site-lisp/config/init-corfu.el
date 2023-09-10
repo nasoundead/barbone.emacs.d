@@ -40,7 +40,6 @@
     corfu-map)
 
     (require 'cape)
-    
 )
 
 ;; tabnine
@@ -49,8 +48,8 @@
 (setq tabnine-minimum-prefix-length 0)
 (setq tabnine-executable-args (list "--log-level" "Error" "--no-lsp" "false"))
 ;; (add-hook 'on-first-input-hook #'tabnine-start-process)
-(add-hook 'prog-mode-hook #'tabnine-mode)
-(add-hook 'kill-emacs-hook #'tabnine-kill-process)
+;; (add-hook 'prog-mode-hook #'tabnine-mode)
+;; (add-hook 'kill-emacs-hook #'tabnine-kill-process)
 (with-eval-after-load 'tabnine
     (define-key tabnine-completion-map [tab] nil)
     (define-key tabnine-completion-map (kbd "M-f") #'tabnine-accept-completion-by-word)
@@ -91,7 +90,7 @@
                                         #'cape-history
                                         #'cape-keyword
                                         #'cape-symbol)
-                                    (tabnine-completion-at-point)
+                                    ;; (tabnine-completion-at-point)
                                     )))))))
 
 (defun +toggle/cape-dict ()
