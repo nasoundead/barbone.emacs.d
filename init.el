@@ -1,11 +1,19 @@
 (require 'init-project)
 (require 'init-better-default)
 (lazy-load-global-keys
- '(
-  ("C-d" . +duplicate-line)
-  ([f11] . +fullscreen)
+  '(
+    ("C-d" . +duplicate-line)
+    ([f11] . +fullscreen)
     )
- "init-func")
+  "init-func")
+
+(lazy-load-global-keys
+  '(
+    ("C-x d" . dirvish)
+    ;; ("C-c f" . dirvish-fd)
+    ([f8] . +dirvish-side-current-path)
+    )
+  "init-dirvish")
 
 (lazy-load-global-keys
   '(

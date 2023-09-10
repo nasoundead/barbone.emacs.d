@@ -48,7 +48,7 @@
 (setq tabnine-wait 0.5)
 (setq tabnine-minimum-prefix-length 0)
 (setq tabnine-executable-args (list "--log-level" "Error" "--no-lsp" "false"))
-(add-hook 'on-first-input-hook #'tabnine-start-process)
+;; (add-hook 'on-first-input-hook #'tabnine-start-process)
 (add-hook 'prog-mode-hook #'tabnine-mode)
 (add-hook 'kill-emacs-hook #'tabnine-kill-process)
 (with-eval-after-load 'tabnine
@@ -73,12 +73,14 @@
         (setq-local completion-at-point-functions 
             #'cape-dabbrev)))
     (add-hook 'text-mode-hook (lambda ()
+        (tabnine-mode)
         (setq-local completion-at-point-functions 
             (list 
                 (cape-super-capf
                     #'cape-dabbrev
                     #'cape-dict)
-                (tabnine-completion-at-point)))))
+                (tabnine-completion-at-point)
+                ))))
     (dolist (hook '(prog-mode-hook))
             (add-hook hook (lambda ()
                         (setq-local completion-at-point-functions

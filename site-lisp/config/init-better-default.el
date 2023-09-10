@@ -236,8 +236,8 @@
 ;; folding
 (lazy-load-global-keys
     '(
-      ("C-c f" . origami-recursively-toggle-node)
-      ("C-c F" . origami-toggle-all-nodes)
+      ("C-{" . origami-recursively-toggle-node)
+      ("C-M-{" . origami-toggle-all-nodes)
     )
     "origami")
 
@@ -249,5 +249,7 @@
 ;; https://editorconfig.org/
 (require 'editorconfig)
 (editorconfig-mode 1)
+
+(global-set-key (kbd "C-x C-r") #'restart-emacs)
 
 (provide 'init-better-default)

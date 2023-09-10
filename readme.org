@@ -110,5 +110,7 @@ git submodule add https://github.com/tumashu/posframe.git site-lisp/pkg/posframe
 git submodule add https://github.com/editorconfig/editorconfig-emacs.git site-lisp/pkg/editorconfig
 git submodule add https://github.com/lassik/emacs-language-id.git site-lisp/pkg/emacs-language-id
 git submodule add https://github.com/shuxiao9058/tabnine.git site-lisp/pkg/tabnine
+git submodule add https://github.com/domtronn/all-the-icons.el.git site-lisp/pkg/all-the-icons
+git submodule add https://github.com/alexluigit/dirvish.git site-lisp/pkg/dirvish
 
 #+end_src
