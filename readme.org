@@ -107,6 +107,8 @@ git submodule add https://github.com/Malabarba/spinner.el.git site-lisp/pkg/spin
 git submodule add https://github.com/gregsexton/origami.el.git site-lisp/pkg/origami
 git submodule add https://github.com/manateelazycat/blink-search.git site-lisp/pkg/blink-search
 git submodule add https://github.com/tumashu/posframe.git site-lisp/pkg/posframe
+git submodule add https://github.com/editorconfig/editorconfig-emacs.git site-lisp/pkg/editorconfig
+git submodule add https://github.com/lassik/emacs-language-id.git site-lisp/pkg/emacs-language-id
 git submodule add https://github.com/shuxiao9058/tabnine.git site-lisp/pkg/tabnine
 
 #+end_src

@@ -184,3 +184,9 @@
 [submodule "site-lisp/pkg/tabnine"]
 	path = site-lisp/pkg/tabnine
 	url = https://github.com/shuxiao9058/tabnine.git
+[submodule "site-lisp/pkg/editorconfig"]
+	path = site-lisp/pkg/editorconfig
+	url = https://github.com/editorconfig/editorconfig-emacs.git
+[submodule "site-lisp/pkg/emacs-language-id"]
+	path = site-lisp/pkg/emacs-language-id
+	url = https://github.com/lassik/emacs-language-id.git

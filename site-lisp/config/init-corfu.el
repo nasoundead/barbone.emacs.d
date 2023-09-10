@@ -40,7 +40,25 @@
     corfu-map)
 
     (require 'cape)
+    
 )
+
+;; tabnine
+(require 'tabnine)
+(setq tabnine-wait 0.5)
+(setq tabnine-minimum-prefix-length 0)
+(setq tabnine-executable-args (list "--log-level" "Error" "--no-lsp" "false"))
+(add-hook 'on-first-input-hook #'tabnine-start-process)
+(add-hook 'prog-mode-hook #'tabnine-mode)
+(add-hook 'kill-emacs-hook #'tabnine-kill-process)
+(with-eval-after-load 'tabnine
+    (define-key tabnine-completion-map [tab] nil)
+    (define-key tabnine-completion-map (kbd "M-f") #'tabnine-accept-completion-by-word)
+    (define-key tabnine-completion-map (kbd "M-<return>") #'tabnine-accept-completion-by-line)
+    (define-key tabnine-completion-map (kbd "C-g") #'tabnine-clear-overlay)
+    (define-key tabnine-completion-map (kbd "M-[") #'tabnine-next-completion)
+    (define-key tabnine-completion-map (kbd "M-]") #'tabnine-previous-completion)
+    )
 
 ;; cape
 (with-eval-after-load 'cape (progn
@@ -48,22 +66,31 @@
     (require 'yasnippet-capf)
     (setq cape-dict-file
         (expand-file-name "site-lisp/dict/words" user-emacs-directory))
-    (add-hook 'protobuf-ts-mode-hook (lambda () (setq-local completion-at-point-functions #'cape-dabbrev)))
-    (add-hook 'thrift-mode-hook (lambda () (setq-local completion-at-point-functions #'cape-dabbrev)))
+    (add-hook 'protobuf-ts-mode-hook (lambda () 
+        (setq-local completion-at-point-functions 
+            #'cape-dabbrev)))
+    (add-hook 'thrift-mode-hook (lambda () 
+        (setq-local completion-at-point-functions 
+            #'cape-dabbrev)))
     (add-hook 'text-mode-hook (lambda ()
-        (setq-local completion-at-point-functions (
-            list (cape-super-capf
+        (setq-local completion-at-point-functions 
+            (list 
+                (cape-super-capf
                     #'cape-dabbrev
-                    #'cape-dict)))))
+                    #'cape-dict)
+                (tabnine-completion-at-point)))))
     (dolist (hook '(prog-mode-hook))
             (add-hook hook (lambda ()
                         (setq-local completion-at-point-functions
-                                (list (cape-super-capf
-                                #'cape-file
-                                #'yasnippet-capf
-                                #'cape-history
-                                #'cape-keyword
-                                #'cape-symbol))))))))
+                                (list 
+                                    (cape-super-capf
+                                        #'cape-file
+                                        #'yasnippet-capf
+                                        #'cape-history
+                                        #'cape-keyword
+                                        #'cape-symbol)
+                                    (tabnine-completion-at-point)
+                                    )))))))
 
 (defun +toggle/cape-dict ()
   (interactive)

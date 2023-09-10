@@ -93,20 +93,18 @@
 ; START TABS CONFIG
 ;; Create a variable for our preferred tab width
 (setq custom-tab-width 2)
-
 ;; Two callable functions for enabling/disabling tabs in Emacs
-(defun disable-tabs () (setq indent-tabs-mode nil))
+(defun disable-tabs () 
+  (setq indent-tabs-mode nil))
 (defun enable-tabs  ()
   (local-set-key (kbd "TAB") 'tab-to-tab-stop)
   (setq indent-tabs-mode t)
   (setq tab-width custom-tab-width))
-
 ;; Hooks to Enable Tabs
 (add-hook 'prog-mode-hook 'enable-tabs)
 ;; Hooks to Disable Tabs
 (add-hook 'lisp-mode-hook 'disable-tabs)
 (add-hook 'emacs-lisp-mode-hook 'disable-tabs)
-
 ;; Language-Specific Tweaks
 (setq-default python-indent-offset custom-tab-width) ;; Python
 (setq-default js-indent-level custom-tab-width)      ;; Javascript
@@ -248,6 +246,8 @@
 (setq diff-hl-draw-borders nil)
 (add-hook 'prog-mode-hook 'diff-hl-mode)
 
-
+;; https://editorconfig.org/
+(require 'editorconfig)
+(editorconfig-mode 1)
 
 (provide 'init-better-default)
