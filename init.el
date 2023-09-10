@@ -1,7 +1,10 @@
 (require 'init-project)
 (require 'init-better-default)
 (lazy-load-global-keys
- '(("C-d" . +duplicate-line))
+ '(
+  ("C-d" . +duplicate-line)
+  ([f11] . +fullscreen)
+    )
  "init-func")
 
 (lazy-load-global-keys

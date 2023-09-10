@@ -181,3 +181,6 @@
 [submodule "site-lisp/pkg/posframe"]
 	path = site-lisp/pkg/posframe
 	url = https://github.com/tumashu/posframe.git
+[submodule "site-lisp/pkg/tabnine"]
+	path = site-lisp/pkg/tabnine
+	url = https://github.com/shuxiao9058/tabnine.git

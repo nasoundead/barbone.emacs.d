@@ -54,4 +54,10 @@
         (insert line-text))
       (next-line)))
 
+;;;###autoload
+(defun +fullscreen ()
+    (interactive)
+    (set-frame-parameter nil 'fullscreen
+      (if (frame-parameter nil 'fullscreen) nil 'fullboth)))
+
 (provide 'init-func)
