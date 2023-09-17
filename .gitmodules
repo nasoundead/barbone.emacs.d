@@ -202,3 +202,15 @@
 [submodule "site-lisp/pkg/nerd-icons"]
 	path = site-lisp/pkg/nerd-icons
 	url = https://github.com/emacsmirror/nerd-icons.git
+[submodule "site-lisp/pkg/web-mode"]
+	path = site-lisp/pkg/web-mode
+	url = https://github.com/fxbois/web-mode.git
+[submodule "site-lisp/pkg/emmet-mode"]
+	path = site-lisp/pkg/emmet-mode
+	url = https://github.com/smihica/emmet-mode.git
+[submodule "site-lisp/pkg/page-break-lines"]
+	path = site-lisp/pkg/page-break-lines
+	url = https://github.com/purcell/page-break-lines.git
+[submodule "site-lisp/pkg/emacs-dashboard"]
+	path = site-lisp/pkg/emacs-dashboard
+	url = https://github.com/emacs-dashboard/emacs-dashboard.git

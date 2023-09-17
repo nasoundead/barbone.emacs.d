@@ -2,7 +2,7 @@
 (require 'init-better-default)
 (lazy-load-global-keys
   '(
-    ("C-d" . +duplicate-line)
+    ("M-S-<down>" . +duplicate-line)
     ([f11] . +fullscreen)
     )
   "init-func")
@@ -40,7 +40,7 @@
 (require 'init-minibuffer)
 (require 'init-corfu)
 
-
+(require 'init-web)
 
 ;; 启动1s后再开启gc管理
 (run-with-idle-timer 1 0 
