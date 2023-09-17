@@ -47,9 +47,9 @@
 (setq tabnine-wait 0.5)
 (setq tabnine-minimum-prefix-length 0)
 (setq tabnine-executable-args (list "--log-level" "Error" "--no-lsp" "false"))
-;; (add-hook 'on-first-input-hook #'tabnine-start-process)
-;; (add-hook 'prog-mode-hook #'tabnine-mode)
-;; (add-hook 'kill-emacs-hook #'tabnine-kill-process)
+(add-hook 'on-first-input-hook #'tabnine-start-process)
+(add-hook 'prog-mode-hook #'tabnine-mode)
+(add-hook 'kill-emacs-hook #'tabnine-kill-process)
 (with-eval-after-load 'tabnine
     (define-key tabnine-completion-map [tab] nil)
     (define-key tabnine-completion-map (kbd "M-f") #'tabnine-accept-completion-by-word)
@@ -63,6 +63,8 @@
 (with-eval-after-load 'cape (progn
     (require 'cape-keyword)
     (require 'yasnippet-capf)
+    (setq yasnippet-capf-lookup-by 'name)
+
     (setq cape-dict-file
         (expand-file-name "site-lisp/dict/words" user-emacs-directory))
     (add-hook 'protobuf-ts-mode-hook (lambda () 
@@ -78,7 +80,6 @@
                 (cape-super-capf
                     #'cape-dabbrev
                     #'cape-dict)
-                (tabnine-completion-at-point)
                 ))))
     (dolist (hook '(prog-mode-hook))
             (add-hook hook (lambda ()
@@ -86,13 +87,21 @@
                                 (list 
                                     (cape-super-capf
                                         #'cape-file
-                                        #'yasnippet-capf
                                         #'cape-history
                                         #'cape-keyword
                                         #'cape-symbol)
-                                    ;; (tabnine-completion-at-point)
-                                    )))))))
+                                    )))))
+    )
+)
 
+;;;###autoload
+(defun +toggle/yasnippet-capf ()
+  (interactive)
+  (if (--find (eq it 'yasnippet-capf) completion-at-point-functions)
+      (setq-local completion-at-point-functions (-remove-item 'yasnippet-capf completion-at-point-functions))
+    (add-to-list 'completion-at-point-functions 'yasnippet-capf)))
+
+;;;###autoload
 (defun +toggle/cape-dict ()
   (interactive)
   (require 'dash)

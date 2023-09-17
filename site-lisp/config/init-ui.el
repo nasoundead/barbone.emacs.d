@@ -1,16 +1,17 @@
 ;; themes
-;; (require 'doom-themes)
-(setq +evan-theme (if (and (>= (string-to-number (format-time-string "%H")) 6)
-			                     (>= (string-to-number (format-time-string "%H")) 18))
-			                'modus-vivendi
-                    'modus-operandi))
+(require 'doom-themes)
+(setq +evan-theme 'doom-Iosvkem)
+;; (setq +evan-theme (if (and (>= (string-to-number (format-time-string "%H")) 6)
+;; 			                     (>= (string-to-number (format-time-string "%H")) 18))
+;; 			                'modus-vivendi
+;;                     'modus-operandi))
 (load-theme +evan-theme t nil)
 (enable-theme +evan-theme)
 
 (when window-system
   (set-frame-position (selected-frame) 10 10)
   (add-to-list 'default-frame-alist '(height . 45))
-  (add-to-list 'default-frame-alist '(width . 180)))
+  (add-to-list 'default-frame-alist '(width . 160)))
 
 
 ;; beacon

@@ -17,6 +17,12 @@
 
 (lazy-load-global-keys
   '(
+    ("C-c s" . one-key-menu-yasnippet)
+    )
+  "init-yasnippet")
+
+(lazy-load-global-keys
+  '(
     ("C-c g" . one-key-menu-magit)
   )
   "init-magit")

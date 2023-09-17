@@ -1,7 +1,7 @@
 (require 'add-hooks)
 
 (setq initial-buffer-choice t)
-;; (add-hook 'emacs-startup-hook (lambda () (run-with-timer 0 0 (lambda () (call-interactively 'writeroom-mode)))))
+
 (setq user-full-name "nasoundead")       ;设置用户名
 (setq user-mail-address
       "nasoundead@163.com") 	;设置邮箱
