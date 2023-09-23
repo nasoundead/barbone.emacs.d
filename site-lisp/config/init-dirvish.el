@@ -16,7 +16,7 @@
 
 (dolist (hook '(dired-mode-hook dirvish-mode-hook))
     (add-hook hook (lambda ()
-        
+
         (keymap-set dired-mode-map "C-b" 'dired-up-directory)
         (keymap-set dired-mode-map "C-f" 'dired-find-file)
         )))
@@ -52,7 +52,7 @@
     dirvish-mode-map)
 
 
-;; (bind-keys 
+;; (bind-keys
 ;;     :map 'dirvish-mode-map
 ;;     ;; left click for expand/collapse dir or open file
 ;;     ("<mouse-1>" . dirvish-subtree-toggle-or-open)
