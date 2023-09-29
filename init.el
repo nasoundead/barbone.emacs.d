@@ -10,10 +10,15 @@
 (lazy-load-global-keys
   '(
     ("C-x d" . dirvish)
-    ;; ("C-c f" . dirvish-fd)
-    ([f8] . +dirvish-side-current-path)
+    ;; ([f8] . +dirvish-side-current-path)
     )
   "init-dirvish")
+
+(lazy-load-global-keys
+  '(
+    ("C-c d" . ztree-diff)
+    )
+  "init-ztree")
 
 (lazy-load-global-keys
   '(
@@ -34,6 +39,7 @@
   (require 'init-font)
 )
 
+;; (require 'init-evil)
 (require 'init-flycheck)
 (require 'init-lsp)
 (require 'init-treesit)

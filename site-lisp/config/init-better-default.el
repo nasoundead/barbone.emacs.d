@@ -233,6 +233,13 @@
     )
     "multiple-cursors")
 
+
+(lazy-load-global-keys
+    '(
+      ("C-q" . emacs-surround)
+    )
+    "emacs-surround")
+
 ;; folding
 (lazy-load-global-keys
     '(
@@ -251,5 +258,28 @@
 (editorconfig-mode 1)
 
 (global-set-key (kbd "C-x C-r") #'restart-emacs)
+
+;; pcre and ialign
+(require 'pcre2el)
+(rxt-global-mode 1)
+
+;; (global-set-key (kbd "C-x l") #'ialign)
+(setq ialign-pcre-mode t)
+(setq ialign-initial-group -1)
+(setq ialign-initial-repeat t)
+(setq ialign-initial-regexp "([ ,=])")
+(lazy-load-global-keys
+    '(
+      ("C-x l" . ialign)
+    )
+    "ialign")
+
+;; move text
+(lazy-load-global-keys
+    '(
+      ("M-<up>"   . move-text-up)
+      ("M-<down>" . move-text-down)
+    )
+    "move-text")
 
 (provide 'init-better-default)

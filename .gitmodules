@@ -220,3 +220,21 @@
 [submodule "site-lisp/pkg/kind-all-the-icons"]
 	path = site-lisp/pkg/kind-all-the-icons
 	url = https://github.com/Eason0210/kind-all-the-icons.git
+[submodule "site-lisp/pkg/evil"]
+	path = site-lisp/pkg/evil
+	url = https://github.com/emacs-evil/evil.git
+[submodule "site-lisp/pkg/ztree"]
+	path = site-lisp/pkg/ztree
+	url = https://codeberg.org/fourier/ztree.git
+[submodule "site-lisp/pkg/emacs-surround"]
+	path = site-lisp/pkg/emacs-surround
+	url = https://github.com/ganmacs/emacs-surround.git
+[submodule "site-lisp/pkg/pcre2el"]
+	path = site-lisp/pkg/pcre2el
+	url = https://github.com/joddie/pcre2el.git
+[submodule "site-lisp/pkg/interactive-align"]
+	path = site-lisp/pkg/interactive-align
+	url = https://github.com/mkcms/interactive-align.git
+[submodule "site-lisp/pkg/move-text"]
+	path = site-lisp/pkg/move-text
+	url = https://github.com/emacsfodder/move-text.git
