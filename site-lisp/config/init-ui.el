@@ -18,9 +18,6 @@
 (require 'beacon)
 (beacon-mode 1)
 
-;; posframe
-(require 'posframe)
-
 ;; modeline
 (require 'doom-modeline)
 (doom-modeline-mode 1)
@@ -40,10 +37,7 @@
     (setq aw-keys '(?a ?s ?d ?f ?g ?h ?j ?k ?l)))
 
 (lazy-load-global-keys
-  '(("C-;" . avy-goto-char)
-    ("C-'" . avy-goto-char-2)
-    ("M-g w" . avy-goto-word-0)
-    ("M-g l" . avy-goto-line))
+  '(("C-;" . avy-goto-char))
   "avy")
 
 
@@ -60,38 +54,38 @@
   (require 'highlight-defined)
   (highlight-defined-mode)))
 
-;; dashboard
-(require 'dashboard)
-(dashboard-setup-startup-hook)
-(setq initial-buffer-choice (lambda () (get-buffer-create "*dashboard*")))
-;; Set the title
-(setq dashboard-banner-logo-title "Welcome to WangHaibo's Emacs Dashboard")
+;; ;; dashboard
+;; (require 'dashboard)
+;; (dashboard-setup-startup-hook)
+;; (setq initial-buffer-choice (lambda () (get-buffer-create "*dashboard*")))
+;; ;; Set the title
+;; (setq dashboard-banner-logo-title "Welcome to WangHaibo's Emacs Dashboard")
 
-;; Content is not centered by default. To center, set
-(setq dashboard-center-content t)
+;; ;; Content is not centered by default. To center, set
+;; (setq dashboard-center-content t)
 
-(require 'all-the-icons)
-(setq dashboard-items '((recents  . 7)
-                        (bookmarks . 7)
-                        (projects . 9)
-                        (agenda . 5)
-                        (registers . 5)))
-(setq dashboard-icon-type 'all-the-icons)
-(setq dashboard-set-navigator t)
-;; Format: "(icon title help action face prefix suffix)"
-(setq dashboard-navigator-buttons
-      `(;; line1
-        ((,(all-the-icons-octicon "mark-github" :height 1.1 :v-adjust 0.0)
-         "Github Homepage"
-         "Browse Github Homepage"
-         (lambda (&rest _) (browse-url "https://www.github.com/")))
-        ("★" "Star" "Show stars" (lambda (&rest _) (show-stars)) warning)
-        ("?" "" "?/h" #'show-help nil "<" ">"))))
-(setq dashboard-set-init-info t)
-(setq dashboard-projects-switch-function 'counsel-projectile-switch-project-by-name)
+;; (require 'all-the-icons)
+;; (setq dashboard-items '((recents  . 7)
+;;                         (bookmarks . 7)
+;;                         (projects . 9)
+;;                         (agenda . 5)
+;;                         (registers . 5)))
+;; (setq dashboard-icon-type 'all-the-icons)
+;; (setq dashboard-set-navigator t)
+;; ;; Format: "(icon title help action face prefix suffix)"
+;; (setq dashboard-navigator-buttons
+;;       `(;; line1
+;;         ((,(all-the-icons-octicon "mark-github" :height 1.1 :v-adjust 0.0)
+;;          "Github Homepage"
+;;          "Browse Github Homepage"
+;;          (lambda (&rest _) (browse-url "https://www.github.com/")))
+;;         ("★" "Star" "Show stars" (lambda (&rest _) (show-stars)) warning)
+;;         ("?" "" "?/h" #'show-help nil "<" ">"))))
+;; (setq dashboard-set-init-info t)
+;; (setq dashboard-projects-switch-function 'counsel-projectile-switch-project-by-name)
 
-(add-to-list 'dashboard-items '(agenda) t)
-(setq dashboard-week-agenda t)
-(setq dashboard-filter-agenda-entry 'dashboard-no-filter-agenda)
+;; (add-to-list 'dashboard-items '(agenda) t)
+;; (setq dashboard-week-agenda t)
+;; (setq dashboard-filter-agenda-entry 'dashboard-no-filter-agenda)
 
 (provide 'init-ui)

@@ -24,6 +24,7 @@
 (with-eval-after-load 'corfu
     ;; kind-icon
     (require 'kind-icon)
+    ;; (require 'kind-all-the-icons)
     ;; corfu-doc
     (require 'corfu-doc)
 
@@ -115,6 +116,9 @@
     (setq kind-icon-use-icons t)
     (add-to-list 'kind-icon-mapping '(EnumMember "em" :icon "format-list-checks" :face font-lock-builtin-face))
     (add-to-list 'corfu-margin-formatters #'kind-icon-margin-formatter)))
+
+(with-eval-after-load 'kind-all-the-icons (progn
+    (add-to-list 'corfu-margin-formatters #'kind-all-the-icons-margin-formatter)))
 
 
 (provide 'init-corfu)

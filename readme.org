@@ -119,5 +119,7 @@ git submodule add https://github.com/emacs-dashboard/emacs-dashboard.git site-li
 git submodule add https://github.com/seagle0128/doom-modeline.git site-lisp/pkg/doom-modeline
 git submodule add https://github.com/fxbois/web-mode.git site-lisp/pkg/web-mode
 git submodule add https://github.com/smihica/emmet-mode.git site-lisp/pkg/emmet-mode
+git submodule add https://github.com/meow-edit/meow.git site-lisp/pkg/meow
+git submodule add https://github.com/Eason0210/kind-all-the-icons.git site-lisp/pkg/kind-all-the-icons
 
 #+end_src
