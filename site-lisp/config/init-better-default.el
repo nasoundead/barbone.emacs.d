@@ -282,4 +282,16 @@
     )
     "move-text")
 
+;; fanyi
+(lazy-load-global-keys
+    '(
+      ("C-x f" . fanyi-dwim2)
+    )
+    "fanyi")
+(custom-set-variables
+  '(fanyi-providers '(fanyi-haici-provider
+                      fanyi-youdao-thesaurus-provider
+                      fanyi-etymon-provider)))
+(setq fanyi-sound-player-support-https t)
+
 (provide 'init-better-default)

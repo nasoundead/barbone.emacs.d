@@ -1,10 +1,13 @@
 ;; themes
-;; (require 'doom-themes)
-;; (setq +evan-theme 'doom-moonlight)
-(setq +evan-theme (if (and (>= (string-to-number (format-time-string "%H")) 6)
-			                     (>= (string-to-number (format-time-string "%H")) 18))
-			                'modus-vivendi
-                    'modus-operandi))
+;; (require 'carbon-theme)
+;; (require 'paperlike-theme)
+(require 'doom-themes)
+(setq +evan-theme 'doom-moonlight)
+;; (setq +evan-theme 'paperlike)
+;; (setq +evan-theme (if (and (>= (string-to-number (format-time-string "%H")) 6)
+;; 			                     (>= (string-to-number (format-time-string "%H")) 18))
+;; 			                'modus-vivendi
+;;                     'modus-operandi))
 (load-theme +evan-theme t nil)
 (enable-theme +evan-theme)
 
@@ -19,8 +22,10 @@
 (beacon-mode 1)
 
 ;; modeline
-(require 'doom-modeline)
-(doom-modeline-mode 1)
+;; (require 'doom-modeline)
+;; (doom-modeline-mode 1)
+(require 'mood-line)
+(mood-line-mode)
 
 ;; line number
 (setq display-line-numbers-width-start t)

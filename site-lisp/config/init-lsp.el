@@ -3,26 +3,26 @@
 	  (lambda ()
             (require 'flycheck)
             (require 'lsp-mode)
-            
+
             ))
 
 (require 'add-hooks)
 (add-hooks '((
-                (python-mode python-ts-mode) 
-                . 
-                (lambda() 
+                (python-mode python-ts-mode)
+                .
+                (lambda()
                     (require 'lsp-pyright)
                     (lsp))
                 )
             )
 )
 (add-hooks '(((
-                js-ts-mode 
-                css-ts-mode 
+                js-ts-mode
+                css-ts-mode
                 markdown-mode
                 yaml-mode
-                yaml-ts-mode 
-                typescript-ts-mode 
+                yaml-ts-mode
+                typescript-ts-mode
                 tsx-ts-mode
                 ) . lsp)))
 
@@ -83,7 +83,7 @@
 ;;;###autoload
 (defun +orderless-dispatch-flex-first (_pattern index _total)
     (and (eq index 0) 'orderless-flex))
-(add-hook 'orderless-style-dispatchers 
+(add-hook 'orderless-style-dispatchers
     #'+orderless-dispatch-flex-first nil 'local)
 
 

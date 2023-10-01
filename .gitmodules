@@ -238,3 +238,15 @@
 [submodule "site-lisp/pkg/move-text"]
 	path = site-lisp/pkg/move-text
 	url = https://github.com/emacsfodder/move-text.git
+[submodule "site-lisp/pkg/fanyi"]
+	path = site-lisp/pkg/fanyi
+	url = https://github.com/condy0919/fanyi.el.git
+[submodule "site-lisp/pkg/carbon-theme"]
+	path = site-lisp/pkg/carbon-theme
+	url = https://github.com/DogLooksGood/carbon-theme.git
+[submodule "site-lisp/pkg/paperlike-theme"]
+	path = site-lisp/pkg/paperlike-theme
+	url = https://github.com/DogLooksGood/paperlike-theme.git
+[submodule "site-lisp/pkg/mood-line"]
+	path = site-lisp/pkg/mood-line
+	url = https://github.com/jessiehildebrandt/mood-line.git

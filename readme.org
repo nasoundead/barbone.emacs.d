@@ -117,6 +117,7 @@ git submodule add https://github.com/emacsmirror/shrink-path.git site-lisp/pkg/s
 git submodule add https://github.com/purcell/page-break-lines.git site-lisp/pkg/page-break-lines
 git submodule add https://github.com/emacs-dashboard/emacs-dashboard.git site-lisp/pkg/emacs-dashboard
 git submodule add https://github.com/seagle0128/doom-modeline.git site-lisp/pkg/doom-modeline
+git submodule add https://github.com/jessiehildebrandt/mood-line.git site-lisp/pkg/mood-line
 git submodule add https://github.com/fxbois/web-mode.git site-lisp/pkg/web-mode
 git submodule add https://github.com/smihica/emmet-mode.git site-lisp/pkg/emmet-mode
 git submodule add https://github.com/meow-edit/meow.git site-lisp/pkg/meow
@@ -127,5 +128,8 @@ git submodule add https://github.com/ganmacs/emacs-surround.git site-lisp/pkg/em
 git submodule add https://github.com/joddie/pcre2el.git site-lisp/pkg/pcre2el
 git submodule add https://github.com/mkcms/interactive-align.git site-lisp/pkg/interactive-align
 git submodule add https://github.com/emacsfodder/move-text.git site-lisp/pkg/move-text
+git submodule add https://github.com/condy0919/fanyi.el.git site-lisp/pkg/fanyi
+git submodule add https://github.com/DogLooksGood/carbon-theme.git site-lisp/pkg/carbon-theme
+git submodule add https://github.com/DogLooksGood/paperlike-theme.git site-lisp/pkg/paperlike-theme
 
 #+end_src
