@@ -18,14 +18,14 @@
 
 
 ;; beacon
-(require 'beacon)
-(beacon-mode 1)
+;; (require 'beacon)
+;; (beacon-mode 1)
 
 ;; modeline
-;; (require 'doom-modeline)
-;; (doom-modeline-mode 1)
-(require 'mood-line)
-(mood-line-mode)
+(require 'doom-modeline)
+(doom-modeline-mode 1)
+;; (require 'mood-line)
+;; (mood-line-mode)
 
 ;; line number
 (setq display-line-numbers-width-start t)
