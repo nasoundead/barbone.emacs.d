@@ -1,36 +1,6 @@
 (require 'init-project)
 (require 'init-better-default)
-(lazy-load-global-keys
-  '(
-    ("M-S-<down>" . +duplicate-line)
-    ([f11] . +fullscreen)
-    )
-  "init-func")
-
-(lazy-load-global-keys
-  '(
-    ("C-x d" . dirvish)
-    ;; ([f8] . +dirvish-side-current-path)
-    )
-  "init-dirvish")
-
-(lazy-load-global-keys
-  '(
-    ("C-c d" . ztree-diff)
-    )
-  "init-ztree")
-
-(lazy-load-global-keys
-  '(
-    ("C-c s" . one-key-menu-yasnippet)
-    )
-  "init-yasnippet")
-
-(lazy-load-global-keys
-  '(
-    ("C-c g" . one-key-menu-magit)
-  )
-  "init-magit")
+(require 'init-key)
 
 (require 'init-ui)
 (require 'init-mode)

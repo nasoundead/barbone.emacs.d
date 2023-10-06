@@ -131,5 +131,8 @@ git submodule add https://github.com/emacsfodder/move-text.git site-lisp/pkg/mov
 git submodule add https://github.com/condy0919/fanyi.el.git site-lisp/pkg/fanyi
 git submodule add https://github.com/DogLooksGood/carbon-theme.git site-lisp/pkg/carbon-theme
 git submodule add https://github.com/DogLooksGood/paperlike-theme.git site-lisp/pkg/paperlike-theme
+git submodule add https://github.com/Fanael/highlight-numbers.git site-lisp/pkg/highlight-numbers
+git submodule add https://github.com/lorniu/go-translate.git site-lisp/pkg/go-translate
+git submodule add https://github.com/nflath/sudo-edit.git site-lisp/pkg/sudo-edit
 
 #+end_src

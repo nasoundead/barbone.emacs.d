@@ -250,3 +250,12 @@
 [submodule "site-lisp/pkg/mood-line"]
 	path = site-lisp/pkg/mood-line
 	url = https://github.com/jessiehildebrandt/mood-line.git
+[submodule "site-lisp/pkg/highlight-numbers"]
+	path = site-lisp/pkg/highlight-numbers
+	url = https://github.com/Fanael/highlight-numbers.git
+[submodule "site-lisp/pkg/sudo-edit"]
+	path = site-lisp/pkg/sudo-edit
+	url = https://github.com/nflath/sudo-edit.git
+[submodule "site-lisp/pkg/go-translate"]
+	path = site-lisp/pkg/go-translate
+	url = https://github.com/lorniu/go-translate.git

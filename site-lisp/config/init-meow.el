@@ -2,22 +2,8 @@
 (meow-global-mode 1)
 
 
-;;;###autoload
-(defmacro lazy-one-key-create-menu (title &rest keybinds)
-  (let (one-key-key-alist)
-    (dolist (ele keybinds)
-      (autoload (plist-get ele :command) (plist-get ele :filename) nil t)
-      (push
-       (cons (cons (plist-get ele :key) (plist-get ele :description)) (plist-get ele :command))
-       one-key-key-alist))
-    `(one-key-create-menu ,title (quote ,one-key-key-alist))))
 
-;;;###autoload
-(lazy-one-key-create-menu "Toggle"
-    (:key "l" :description "Toggle line numbers" :command display-line-numbers-mode :filename "display-line-numbers")
-    (:key "s" :description "Toggle eshell" :command eshell :filename "eshell")
-    (:key "f" :description "Toggle dirvish side" :command +dirvish-side-current-path :filename "init-dirvish"))
-    
+
 (defun lazy-meow-leader-define-key (&rest keybinds)
     (let* ((meow-leader-keybinds))
         (dolist (ele  keybinds)
@@ -33,30 +19,7 @@
     (setq meow-keypad-start-keys '((?c . ?c)
                         (?h . ?h) (?x . ?x)))
     (setq meow-cheatsheet-layout meow-cheatsheet-layout-qwerty)
-    (meow-motion-overwrite-define-key
-        '("j" . meow-next)
-        '("k" . meow-prev)
-        '("h" . meow-left)
-        '("l" . meow-right)
-        '("o" . meow-block)
-        '("x" . meow-line)
-        '("W" . meow-mark-symbol)
-        '("W" . meow-mark-word)
-        '("C-j" . (lambda ()
-                (interactive)
-                (dotimes (i 2)
-                (call-interactively 'meow-next))))
-        '("C-k" . (lambda ()
-                (interactive)
-                (dotimes (i 2)
-                (call-interactively 'meow-prev))))
-        '("<escape>" . ignore))
-
-    (defun +evan/code-key-menu ()
-        (interactive)
-        (cond ((featurep 'lsp-bridge-mode) (one-key-menu-code-bridge))
-        ((featurep 'eglot-managed-mode) (one-key-menu-code-eglot))
-        ((featurep 'lsp-mode) (one-key-menu-code-lsp))))
+    
         
     (meow-leader-define-key
         ;; SPC j/k will run the original command in MOTION state.
@@ -66,7 +29,7 @@
         '("s" . one-key-menu-search)
         '("b" . one-key-menu-buffer)
         '("u" . one-key-menu-useful)
-        '("j" . +evan/code-key-menu)
+        '("j" . one-key-menu-code-lsp)
         '("g" . one-key-menu-nagivator)
         '("v" . one-key-menu-magit)
         '("o" . one-key-menu-org)
@@ -83,8 +46,7 @@
         '("0" . meow-digit-argument)
         '("/" . meow-keypad-describe-key)
         '("?" . meow-cheatsheet)
-        '("SPC" . project-find-file)
-        '("-" . lsp-bridge-jump-to-next-diagnostic)
+        '("SPC" . meow-M-x)
     )
 
     (lazy-meow-leader-define-key
@@ -95,10 +57,20 @@
         '(("F" . one-key-menu-fold) "init-vimish-fold")
         '(("r" . +evan/project-recentf) "init-project")
     )
-    
+    (meow-motion-overwrite-define-key
+        '("j" . meow-next)
+        '("k" . meow-prev)
+        '("n" . meow-next)
+        '("p" . meow-prev)
+        '("h" . meow-left)
+        '("l" . meow-right)
+        '("o" . meow-block)
+        '("e" . meow-line)
+        '("m" . meow-mark-word)
+        '("M" . meow-mark-symbol)
+        '("<escape>" . ignore))
     (meow-normal-define-key
-        
-
+        '("?" . meow-keypad-describe-key)
         '("*" . meow-expand-0)
         '("=" . meow-expand-9)
         '("!" . meow-expand-8)
@@ -132,41 +104,22 @@
         '("H" . meow-left-expand)
         '("i" . meow-insert)
         '("I" . meow-open-above)
-
-        '("j" . meow-next)
-        '("J" . meow-join)
-        '("C-j" . (lambda ()
-                    (interactive)
-                    (dotimes (i 2)
-                    (call-interactively 'meow-next))))
-        '("M-j" . (lambda ()
-                (interactive)
-                (dotimes (_ 5)
-                (call-interactively 'meow-next))
-                ))
-        '("k" . meow-prev)
-        '("K" . meow-prev-expand)
-        '("C-k" . (lambda ()
-            (interactive)
-            (dotimes (i 2)
-            (call-interactively 'meow-prev))))
-        '("M-k" . (lambda ()
-                (interactive)
-                (dotimes (_ 5)
-                (call-interactively 'meow-prev))))
-
+        '("j" . meow-join)
+        '("k" . meow-kill)
         '("l" . meow-right)
         '("L" . meow-right-expand)
         '("m" . meow-mark-word)
         '("M" . meow-mark-symbol)
-        '("n" . meow-search)
+        '("n" . meow-next)
+        '("N" . meow-next-expand)
         '("o" . meow-block)
         '("O" . meow-to-block)
-        '("p" . meow-yank)
+        '("p" . meow-prev)
+        '("P" . meow-prev-expand)
         '("q" . meow-quit)
         '("r" . meow-replace)
         '("R" . meow-swap-grab)
-        '("s" . meow-kill)
+        '("s" . meow-search)
         '("t" . meow-till)
         '("u" . meow-undo)
         '("U" . meow-undo-in-selection)
@@ -178,7 +131,10 @@
         '("X" . meow-sync-grab)
         '("y" . meow-yank)
         '("z" . meow-pop-selection)
+        '("$" . repeat)
         '("'" . repeat)
+        '("&" . meow-query-replace-regexp)
+        '("%" . meow-query-replace)
         '("<escape>" . ignore)))
 
 (meow-setup)

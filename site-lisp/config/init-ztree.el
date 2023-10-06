@@ -1,16 +1,16 @@
 (require 'ztree)
 
-;; By default all files starting with dot (like .gitignore) are not shown 
-;; and excluded from the difference status for directories. 
+;; By default all files starting with dot (like .gitignore) are not shown
+;; and excluded from the difference status for directories.
 ;; One can add an additional regexps to the list ztree-diff-filter-list.
 
-;; One also could turn on unicode characters to draw the tree with instead of normal ASCII-characters. 
+;; One also could turn on unicode characters to draw the tree with instead of normal ASCII-characters.
 ;; This is controlled by the ztree-draw-unicode-lines variable.
 
-;; The variable ztree-diff-consider-file-permissions (which is nil by default) 
+;; The variable ztree-diff-consider-file-permissions (which is nil by default)
 ;; if set to t allows to compare file attributes as well, the files will be considered different if they have different mode.
 
-;; The special variable ztree-diff-additional-options introduced to provide an additional arguments to the 'diff' tool. 
+;; The special variable ztree-diff-additional-options introduced to provide an additional arguments to the 'diff' tool.
 ;; For example one could specify
 
 ;; (setq ztree-diff-additional-options '("-w" "-i"))

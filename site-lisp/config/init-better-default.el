@@ -157,11 +157,11 @@
 
 
 ;; isearch enhancements
-;; (require 'anzu)
-;; (add-hook 'after-init-hook 'global-anzu-mode)
-;; (setq anzu-mode-lighter "")
-;; (global-set-key [remap query-replace-regexp] 'anzu-query-replace-regexp)
-;; (global-set-key [remap query-replace] 'anzu-query-replace)
+(require 'anzu)
+(add-hook 'after-init-hook 'global-anzu-mode)
+(setq anzu-mode-lighter "")
+(global-set-key [remap query-replace-regexp] 'anzu-query-replace-regexp)
+(global-set-key [remap query-replace] 'anzu-query-replace)
 (setq isearch-lazy-count t)
 (setq lazy-count-prefix-format "%s/%s ")
 (setq lazy-highlight-cleanup nil)
@@ -205,6 +205,9 @@
 (lazy-load-global-keys
     '(("C-z" . vundo))
     "vundo")
+
+;; highlight-numbers
+;; (add-hook 'prog-mode-hook 'highlight-numbers-mode)
 
 ;; better comment
 (lazy-load-global-keys
@@ -282,16 +285,6 @@
     )
     "move-text")
 
-;; fanyi
-(lazy-load-global-keys
-    '(
-      ("C-x f" . fanyi-dwim2)
-    )
-    "fanyi")
-(custom-set-variables
-  '(fanyi-providers '(fanyi-haici-provider
-                      fanyi-youdao-thesaurus-provider
-                      fanyi-etymon-provider)))
-(setq fanyi-sound-player-support-https t)
+
 
 (provide 'init-better-default)
