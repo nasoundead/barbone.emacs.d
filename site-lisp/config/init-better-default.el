@@ -201,11 +201,6 @@
 
 ;; (lazy-load-unset-keys '("C-x C-f" "C-z" "C-q" "s-W" "s-z" "M-h" "C-x C-c" "C-\\" "s-c" "s-x" "s-v"))
 
-;; undo
-(lazy-load-global-keys
-    '(("C-z" . vundo))
-    "vundo")
-
 ;; highlight-numbers
 ;; (add-hook 'prog-mode-hook 'highlight-numbers-mode)
 
@@ -218,38 +213,6 @@
         '(("M-;" . org-comment-dwim-2))
         org-mode-map
         "comment-dwim-2"))
-
-;; expand region
-(lazy-load-global-keys
-    '(
-      ("C-w" . er/expand-region)
-      ("C-S-w" . er/contract-region)
-    )
-    "expand-region")
-
-;; multi-cursor
-(lazy-load-global-keys
-    '(
-      ("C-c C-<" . mc/mark-all-dwim)
-      ("C->" . mc/mark-next-like-this)
-      ("C-<" . mc/mark-previous-like-this)
-    )
-    "multiple-cursors")
-
-
-(lazy-load-global-keys
-    '(
-      ("C-q" . emacs-surround)
-    )
-    "emacs-surround")
-
-;; folding
-(lazy-load-global-keys
-    '(
-      ("C-{" . origami-recursively-toggle-node)
-      ("C-M-{" . origami-toggle-all-nodes)
-    )
-    "origami")
 
 ;; diff-hl
 (require 'diff-hl)
@@ -271,20 +234,5 @@
 (setq ialign-initial-group -1)
 (setq ialign-initial-repeat t)
 (setq ialign-initial-regexp "([ ,=])")
-(lazy-load-global-keys
-    '(
-      ("C-x l" . ialign)
-    )
-    "ialign")
-
-;; move text
-(lazy-load-global-keys
-    '(
-      ("M-<up>"   . move-text-up)
-      ("M-<down>" . move-text-down)
-    )
-    "move-text")
-
-
 
 (provide 'init-better-default)

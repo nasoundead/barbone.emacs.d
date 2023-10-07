@@ -35,27 +35,56 @@
         ("C-x f" . fanyi-dwim2) 
     )
     "fanyi")
-
-;;;###autoload
-(one-key-create-menu "MAGIT"
+(lazy-load-global-keys
     '(
-        (("s" . "Magit status") . magit-status)
-        (("c" . "Magit checkout") . magit-checkout)
-        (("C" . "Magit commit") . magit-commit)
-        (("u" . "Magit push to remote") . magit-push-current-to-pushremote)
-        (("p" . "Magit delete remote branch") . magit-delete-remote-branch)
-        (("i" . "Magit pull") . magit-pull-from-upstream)
-        (("r" . "Magit rebase") . magit-rebase)
-        (("e" . "Magit merge") . magit-merge)
-        (("l" . "Magit log") . magit-log-all)
-        (("L" . "Magit blame") . magit-blame+)
-        (("b" . "Magit branch") . magit-branch)
-        (("B" . "Magit buffer") . magit-process-buffer)
-        (("D" . "Magit discarded") . magit-discard)
-        (("," . "Magit init") . magit-init)
-        (("." . "Magit add remote") . magit-remote-add)
-        )
-    t)
+        ("C-x l" . ialign)
+    )
+    "ialign")
+
+;; move text
+(lazy-load-global-keys
+    '(
+        ("M-<up>"   . move-text-up)
+        ("M-<down>" . move-text-down)
+    )
+    "move-text")
+
+;; undo
+(lazy-load-global-keys
+    '(("C-z" . vundo))
+    "vundo")
+
+;; expand region
+(lazy-load-global-keys
+    '(
+        ("C-w" . er/expand-region)
+        ("C-S-w" . er/contract-region)
+    )
+    "expand-region")
+
+;; multi-cursor
+(lazy-load-global-keys
+    '(
+        ("C-c C-<" . mc/mark-all-dwim)
+        ("C->" . mc/mark-next-like-this)
+        ("C-<" . mc/mark-previous-like-this)
+    )
+    "multiple-cursors")
+
+(lazy-load-global-keys
+    '(
+        ("C-q" . emacs-surround)
+    )
+    "emacs-surround")
+
+;; folding
+(lazy-load-global-keys
+    '(
+        ("C-{" . origami-recursively-toggle-node)
+        ("C-M-{" . origami-toggle-all-nodes)
+    )
+    "origami")
+
 ;;;###autoload
 (defmacro lazy-one-key-create-menu (title &rest keybinds)
   (let (one-key-key-alist)

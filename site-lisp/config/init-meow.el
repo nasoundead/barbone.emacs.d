@@ -51,10 +51,11 @@
     (lazy-meow-leader-define-key
         '(("w" . one-key-menu-window) "init-window")
         '(("p" . one-key-menu-project)  "init-project")
+        '(("r" . +project-recentf) "init-project")
         '(("e" . one-key-menu-eaf) "init-eaf")
         '(("n" . one-key-menu-blog) "init-org")
         '(("F" . one-key-menu-fold) "init-vimish-fold")
-        '(("r" . +evan/project-recentf) "init-project")
+        
     )
     (meow-motion-overwrite-define-key
         '("j" . meow-next)
