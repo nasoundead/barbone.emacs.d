@@ -60,10 +60,10 @@
   (let ((default-directory (project-root (project-current nil))))
     (require 'blink-search)
     ;; posframe
-    (require 'posframe)
-    (setq blink-search-enable-posframe t)
-    (setq blink-search-posframe-width-ratio 0.85)
-    (setq blink-search-posframe-height-ratio 0.85)
+    ;; (require 'posframe)
+    ;; (setq blink-search-enable-posframe t)
+    ;; (setq blink-search-posframe-width-ratio 0.85)
+    ;; (setq blink-search-posframe-height-ratio 0.85)
     (blink-search)))
 
 

@@ -1,7 +1,8 @@
 ;; themes
-;; (require 'carbon-theme)
-;; (require 'paperlike-theme)
+(require 'carbon-theme)
+(require 'paperlike-theme)
 (require 'doom-themes)
+;; (setq +evan-theme 'leuven-dark)
 (setq +evan-theme 'doom-moonlight)
 ;; (setq +evan-theme 'paperlike)
 ;; (setq +evan-theme (if (and (>= (string-to-number (format-time-string "%H")) 6)
@@ -32,8 +33,8 @@
 (add-hook 'prog-mode-hook #'display-line-numbers-mode)
 
 
-;; The following code means that the first time you press Alt + o, 
-;; Emacs goes to the load-path directory and finds the ace-window.el file, 
+;; The following code means that the first time you press Alt + o,
+;; Emacs goes to the load-path directory and finds the ace-window.el file,
 ;; loads the plugin and executes the ace-window function.
 (lazy-load-global-keys
   '(("M-o" . ace-window))
@@ -46,7 +47,7 @@
   "avy")
 
 
-(add-hook 'prog-mode-hook (lambda() 
+(add-hook 'prog-mode-hook (lambda()
   (require 'highlight-indent-guides)
   (setq highlight-indent-guides-method 'column)
   (highlight-indent-guides-mode)
@@ -55,7 +56,7 @@
   (rainbow-delimiters-mode)
   ))
 
-(add-hook 'emacs-lisp-mode-hook (lambda() 
+(add-hook 'emacs-lisp-mode-hook (lambda()
   (require 'highlight-defined)
   (highlight-defined-mode)))
 

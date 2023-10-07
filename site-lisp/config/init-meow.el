@@ -17,8 +17,8 @@
     (setq meow-keypad-start-keys '((?c . ?c)
                         (?h . ?h) (?x . ?x)))
     (setq meow-cheatsheet-layout meow-cheatsheet-layout-qwerty)
-    
-        
+
+
     (meow-leader-define-key
         ;; SPC j/k will run the original command in MOTION state.
         '("`" . +popup-scratch)
@@ -27,7 +27,7 @@
         '("s" . one-key-menu-search)
         '("b" . one-key-menu-buffer)
         '("u" . one-key-menu-useful)
-        
+
         '("j" . one-key-menu-code-lsp)
         '("g" . one-key-menu-nagivator)
         '("v" . one-key-menu-magit)
@@ -55,11 +55,9 @@
         '(("e" . one-key-menu-eaf) "init-eaf")
         '(("n" . one-key-menu-blog) "init-org")
         '(("F" . one-key-menu-fold) "init-vimish-fold")
-        
+
     )
     (meow-motion-overwrite-define-key
-        '("j" . meow-next)
-        '("k" . meow-prev)
         '("n" . meow-next)
         '("p" . meow-prev)
         '("h" . meow-left)
