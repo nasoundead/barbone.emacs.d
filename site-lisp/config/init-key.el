@@ -101,8 +101,15 @@
     (:key "e" :description "English helper" :command lsp-bridge-toggle-english-helper :filename "init-lsp-bridge")
     (:key "p" :description "Yank buffer filename" :command +yank-buffer-file-name :filename "init-func")
     (:key "S" :description "Sudo edit" :command sudo-edit :filename "sudo-edit")
-    (:key "r" :description "Elfeed" :command elfeed :filename "init-elfeed")
     
+    )
+
+;;;###autoload
+(lazy-one-key-create-menu "EAF"
+    (:key "o" :description "EAF Open anything" :command eaf-open  :filename "init-eaf")
+    (:key "b" :description "EAF Open browser" :command eaf-open-browser  :filename "init-eaf")
+    (:key "h" :description "EAF Open browser with history" :command eaf-open-browser-with-history  :filename "init-eaf")
+    (:key "s" :description "EAF Search" :command eaf-search-it  :filename "init-eaf")
     )
 
 (provide 'init-key)

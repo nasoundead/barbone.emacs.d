@@ -2,8 +2,6 @@
 (meow-global-mode 1)
 
 
-
-
 (defun lazy-meow-leader-define-key (&rest keybinds)
     (let* ((meow-leader-keybinds))
         (dolist (ele  keybinds)
@@ -29,6 +27,7 @@
         '("s" . one-key-menu-search)
         '("b" . one-key-menu-buffer)
         '("u" . one-key-menu-useful)
+        
         '("j" . one-key-menu-code-lsp)
         '("g" . one-key-menu-nagivator)
         '("v" . one-key-menu-magit)
