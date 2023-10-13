@@ -1,21 +1,21 @@
 ;; themes
-(require 'carbon-theme)
-(require 'paperlike-theme)
+;; (require 'carbon-theme)
+;; (require 'paperlike-theme)
 (require 'doom-themes)
 ;; (setq +evan-theme 'leuven-dark)
-(setq +evan-theme 'doom-moonlight)
+;; (setq +evan-theme 'doom-moonlight)
 ;; (setq +evan-theme 'paperlike)
-;; (setq +evan-theme (if (and (>= (string-to-number (format-time-string "%H")) 6)
-;; 			                     (>= (string-to-number (format-time-string "%H")) 18))
-;; 			                'modus-vivendi
-;;                     'modus-operandi))
+(setq +evan-theme (if (and (>= (string-to-number (format-time-string "%H")) 6)
+			                     (>= (string-to-number (format-time-string "%H")) 18))
+			                'modus-vivendi
+                    'modus-operandi))
 (load-theme +evan-theme t nil)
 (enable-theme +evan-theme)
 
-(when window-system
-  (set-frame-position (selected-frame) 10 10)
-  (add-to-list 'default-frame-alist '(height . 45))
-  (add-to-list 'default-frame-alist '(width . 160)))
+;; (when window-system
+;;   (set-frame-position (selected-frame) 10 10)
+;;   (add-to-list 'default-frame-alist '(height . 45))
+;;   (add-to-list 'default-frame-alist '(width . 160)))
 
 
 ;; beacon
@@ -60,38 +60,38 @@
   (require 'highlight-defined)
   (highlight-defined-mode)))
 
-;; ;; dashboard
-;; (require 'dashboard)
-;; (dashboard-setup-startup-hook)
-;; (setq initial-buffer-choice (lambda () (get-buffer-create "*dashboard*")))
-;; ;; Set the title
-;; (setq dashboard-banner-logo-title "Welcome to WangHaibo's Emacs Dashboard")
+;; dashboard
+(require 'dashboard)
+(dashboard-setup-startup-hook)
+(setq initial-buffer-choice (lambda () (get-buffer-create "*dashboard*")))
+;; Set the title
+(setq dashboard-banner-logo-title "Welcome to WangHaibo's Emacs Dashboard")
 
-;; ;; Content is not centered by default. To center, set
-;; (setq dashboard-center-content t)
+;; Content is not centered by default. To center, set
+(setq dashboard-center-content t)
 
-;; (require 'all-the-icons)
-;; (setq dashboard-items '((recents  . 7)
-;;                         (bookmarks . 7)
-;;                         (projects . 9)
-;;                         (agenda . 5)
-;;                         (registers . 5)))
-;; (setq dashboard-icon-type 'all-the-icons)
-;; (setq dashboard-set-navigator t)
-;; ;; Format: "(icon title help action face prefix suffix)"
-;; (setq dashboard-navigator-buttons
-;;       `(;; line1
-;;         ((,(all-the-icons-octicon "mark-github" :height 1.1 :v-adjust 0.0)
-;;          "Github Homepage"
-;;          "Browse Github Homepage"
-;;          (lambda (&rest _) (browse-url "https://www.github.com/")))
-;;         ("★" "Star" "Show stars" (lambda (&rest _) (show-stars)) warning)
-;;         ("?" "" "?/h" #'show-help nil "<" ">"))))
-;; (setq dashboard-set-init-info t)
-;; (setq dashboard-projects-switch-function 'counsel-projectile-switch-project-by-name)
+(require 'all-the-icons)
+(setq dashboard-items '((recents  . 7)
+                        (bookmarks . 7)
+                        (projects . 9)
+                        (agenda . 5)
+                        (registers . 5)))
+(setq dashboard-icon-type 'all-the-icons)
+(setq dashboard-set-navigator t)
+;; Format: "(icon title help action face prefix suffix)"
+(setq dashboard-navigator-buttons
+      `(;; line1
+        ((,(all-the-icons-octicon "mark-github" :height 1.1 :v-adjust 0.0)
+         "Github Homepage"
+         "Browse Github Homepage"
+         (lambda (&rest _) (browse-url "https://www.github.com/")))
+        ("★" "Star" "Show stars" (lambda (&rest _) (show-stars)) warning)
+        ("?" "" "?/h" #'show-help nil "<" ">"))))
+(setq dashboard-set-init-info t)
+(setq dashboard-projects-switch-function 'counsel-projectile-switch-project-by-name)
 
-;; (add-to-list 'dashboard-items '(agenda) t)
-;; (setq dashboard-week-agenda t)
-;; (setq dashboard-filter-agenda-entry 'dashboard-no-filter-agenda)
+(add-to-list 'dashboard-items '(agenda) t)
+(setq dashboard-week-agenda t)
+(setq dashboard-filter-agenda-entry 'dashboard-no-filter-agenda)
 
 (provide 'init-ui)

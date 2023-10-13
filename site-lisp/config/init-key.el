@@ -118,6 +118,29 @@
     (:key "r" :description "Revert buffer" :command revert-buffer :filename ""))
 
 ;;;###autoload
+(one-key-create-menu
+    "Window"
+    '((("l" . "Focus right window") . windmove-right)
+    (("h" . "Focus left window") . windmove-left)
+    (("k" . "Focus up window") . windmove-up)
+    (("j" . "Focus down window") . windmove-down)
+    (("L" . "Swap right window") . windmove-swap-states-right)
+    (("H" . "Swap left window") . windmove-swap-states-left)
+    (("K" . "Swap up window") . windmove-swap-states-up)
+    (("J" . "Swap down window") . windmove-swap-states-down)
+    (("s" . "Split window vertically") . split-window-below)
+    (("v" . "Split window horizontally") . split-window-right)
+    (("d" . "Delete window") . delete-window)
+    (("u" . "Undo window") . winner-undo)
+    (("C-h" . "Resize window to smaller") . shrink-window-horizontally)
+    (("m" . "Delete other window") . delete-other-windows)
+    (("C-k" . "Scroll other window up") . scroll-other-window-down)
+    (("C-j" . "Scroll other window down") . scroll-other-window)
+    (("r" . "Rotate window") . rotate-window)
+    (("R" . "Rotate layout") . rotate-layout)
+    ))
+
+;;;###autoload
 (lazy-one-key-create-menu "Nagivator"
     (:key "d" :description "Go to definetion" :command xref-find-definitions :filename "")
     (:key "r" :description "Go to references" :command xref-find-references :filename "")
