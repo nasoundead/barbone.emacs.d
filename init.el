@@ -8,7 +8,7 @@
 (when (display-graphic-p)
   (require 'init-font)
 )
-(require 'init-meow)
+;; (require 'init-meow)
 (require 'init-flycheck)
 (require 'init-lsp)
 (require 'init-treesit)
@@ -25,4 +25,4 @@
 
 (setq custom-file (concat user-emacs-directory "custom.el"))
 ;; (setq custom-file (expand-file-name "./custom.el" user-emacs-directory))
-(load custom-file t t)
+;; (load custom-file t t)

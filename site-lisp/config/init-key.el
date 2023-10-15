@@ -156,12 +156,5 @@
     
     )
 
-;;;###autoload
-(lazy-one-key-create-menu "EAF"
-    (:key "o" :description "EAF Open anything" :command eaf-open  :filename "init-eaf")
-    (:key "b" :description "EAF Open browser" :command eaf-open-browser  :filename "init-eaf")
-    (:key "h" :description "EAF Open browser with history" :command eaf-open-browser-with-history  :filename "init-eaf")
-    (:key "s" :description "EAF Search" :command eaf-search-it  :filename "init-eaf")
-    )
 
 (provide 'init-key)

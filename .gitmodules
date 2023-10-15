@@ -265,3 +265,6 @@
 [submodule "site-lisp/site-lisp/pkg/emacsql"]
 	path = site-lisp/site-lisp/pkg/emacsql
 	url = https://github.com/magit/emacsql.git
+[submodule "site-lisp/pkg/toc-org"]
+	path = site-lisp/pkg/toc-org
+	url = https://github.com/snosov1/toc-org.git

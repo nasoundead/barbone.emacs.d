@@ -94,7 +94,8 @@ git submodule add https://gitee.com/naso/highlight-indent-guides.git site-lisp/p
 git submodule add https://github.com/Fanael/highlight-defined.git site-lisp/pkg/highlight-defined
 git submodule add https://github.com/Fanael/rainbow-delimiters.git site-lisp/pkg/rainbow-delimiters
 git submodule add https://github.com/jrblevin/markdown-mode.git site-lisp/pkg/markdown-mode
-git submodule add https://github.com/manateelazycat/lsp-bridge.git site-lisp/pkg/lsp-bridge
+git submodule add https://github.com/snosov1/toc-org.git site-lisp/pkg/toc-org
+
 git submodule add https://github.com/joaotavora/eglot.git site-lisp/pkg/eglot
 git submodule add https://github.com/emacs-lsp/lsp-mode.git site-lisp/pkg/lsp-mode
 git submodule add https://github.com/emacs-lsp/lsp-ui.git site-lisp/pkg/lsp-ui

@@ -1,8 +1,11 @@
 (require 'org)
+(require 'org-modern)
 (require 'org-agenda)
 (require 'org-capture)
 (require 'valign)
 
+(with-eval-after-load 'org
+    (global-org-modern-mode))
 
 (add-hook 'org-mode-hook #'valign-mode)
 (add-hook 'org-mode-hook 
@@ -35,9 +38,7 @@
     '(org-checkbox ((t :inherit 'fixed-pitch :background unspecified :box nil)))
     '(org-latex-and-related ((t (:inherit 'fixed-pitch-serif))))))
 
-
 ;; org-roam
-;; (straight-use-package 'org-roam)
 (require 'org-roam)
 (setq org-roam-directory (expand-file-name "~/Org"))
 (defvar org-roam-keymap
@@ -49,11 +50,29 @@
         (define-key keymap "c" 'org-roam-capture)
         (define-key keymap "s" 'org-roam-db-sync)
         keymap))
-
 (defalias 'org-roam-keymap org-roam-keymap)
-
 (global-set-key (kbd "C-c r") 'org-roam-keymap)
-
 (with-eval-after-load "org-roam"
     (org-roam-setup)) 
+
+;; toc
+(if (require 'toc-org nil t)
+    (progn
+      (add-hook 'org-mode-hook 'toc-org-mode)
+
+      ;; enable in markdown, too
+      (add-hook 'markdown-mode-hook 'toc-org-mode)
+      )
+  (warn "toc-org not found"))
+
+;; babel
+(setq org-confirm-babel-evaluate nil)
+(org-babel-do-load-languages
+    'org-babel-load-languages
+    '(
+        (emacs-lisp . t)
+        (js         . t)
+        (plantuml   . t)
+        (python . t)))
+
 (provide 'init-org)
