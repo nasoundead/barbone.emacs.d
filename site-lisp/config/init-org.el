@@ -21,11 +21,39 @@
         (setq org-todo-keyword-faces faces))
     )))
 
-;; (with-eval-after-load 'org-modern-mode (progn
-;;     (modus-themes-load-operandi)
-;;     )
-;; )
+;; Toggle markup visibility with visible mode
+(with-eval-after-load "org"
+    (define-key org-mode-map (kbd "C-c v") 'visible-mode))
+
+(add-hook 'org-mode-hook 'variable-pitch-mode)
+(with-eval-after-load "org"
+;; Use fixed pitch for table and code
+(custom-set-faces
+    '(org-table ((t :inherit 'fixed-pitch-serif)))
+    '(org-code ((t :inherit 'fixed-pitch-serif)))
+    '(org-block ((t :inherit 'fixed-pitch-serif)))
+    '(org-checkbox ((t :inherit 'fixed-pitch :background unspecified :box nil)))
+    '(org-latex-and-related ((t (:inherit 'fixed-pitch-serif))))))
 
 
+;; org-roam
+;; (straight-use-package 'org-roam)
+(require 'org-roam)
+(setq org-roam-directory (expand-file-name "~/Org"))
+(defvar org-roam-keymap
+    (let ((keymap (make-keymap)))
+        (define-key keymap "l" 'org-roam-buffer-toggle)
+        (define-key keymap "f" 'org-roam-node-find)
+        (define-key keymap "g" 'org-roam-graph)
+        (define-key keymap "i" 'org-roam-node-insert)
+        (define-key keymap "c" 'org-roam-capture)
+        (define-key keymap "s" 'org-roam-db-sync)
+        keymap))
 
+(defalias 'org-roam-keymap org-roam-keymap)
+
+(global-set-key (kbd "C-c r") 'org-roam-keymap)
+
+(with-eval-after-load "org-roam"
+    (org-roam-setup)) 
 (provide 'init-org)

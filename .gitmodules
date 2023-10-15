@@ -259,3 +259,9 @@
 [submodule "site-lisp/pkg/go-translate"]
 	path = site-lisp/pkg/go-translate
 	url = https://github.com/lorniu/go-translate.git
+[submodule "site-lisp/pkg/spacemacs-theme"]
+	path = site-lisp/pkg/spacemacs-theme
+	url = https://github.com/nashamri/spacemacs-theme.git
+[submodule "site-lisp/site-lisp/pkg/emacsql"]
+	path = site-lisp/site-lisp/pkg/emacsql
+	url = https://github.com/magit/emacsql.git

@@ -22,11 +22,11 @@
 ;;     '(org-table ((t (:family "Ubuntu Mono")))))
 
 
-(defvar meomacs-font-size 12
+(defvar meomacs-font-size 14
     "Current font size.")
 
 (defvar meomacs-fonts '((default . "Fira Code")
-                        (cjk . "宋体")
+                        (cjk . "Microsoft Yahei")
                         (symbol . "Symbola")
                         (fixed . "Fira Code")
                         (fixed-serif . "Fira Code")

@@ -135,5 +135,8 @@ git submodule add https://github.com/Fanael/highlight-numbers.git site-lisp/pkg/
 git submodule add https://github.com/lorniu/go-translate.git site-lisp/pkg/go-translate
 git submodule add https://github.com/nflath/sudo-edit.git site-lisp/pkg/sudo-edit
 git submodule add https://github.com/emacs-eaf/emacs-application-framework.git site-lisp/pkg/emacs-application-framework
+git submodule add https://github.com/org-roam/org-roam.git site-lisp/pkg/org-roam
+git submodule add https://github.com/magit/emacsql.git site-lisp/pkg/emacsql
+git submodule add https://github.com/nashamri/spacemacs-theme.git site-lisp/pkg/spacemacs-theme
 
 #+end_src

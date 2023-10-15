@@ -2,8 +2,9 @@
 ;; (require 'carbon-theme)
 ;; (require 'paperlike-theme)
 (require 'doom-themes)
+(require 'spacemacs-theme)
 ;; (setq +evan-theme 'leuven-dark)
-(setq +evan-theme 'doom-moonlight)
+(setq +evan-theme 'spacemacs-dark)
 ;; (setq +evan-theme 'paperlike)
 ;; (setq +evan-theme (if (and (>= (string-to-number (format-time-string "%H")) 6)
 ;; 			                     (>= (string-to-number (format-time-string "%H")) 18))
@@ -19,8 +20,8 @@
 
 
 ;; beacon
-;; (require 'beacon)
-;; (beacon-mode 1)
+(require 'beacon)
+(beacon-mode 1)
 
 ;; modeline
 (require 'doom-modeline)

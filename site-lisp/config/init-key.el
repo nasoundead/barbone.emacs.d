@@ -5,12 +5,12 @@
         )
     "init-func")
 
-(lazy-load-global-keys
-'(
-    ("C-x d" . dirvish)
-    ;; ([f8] . +dirvish-side-current-path)
-    )
-    "init-dirvish")
+;; (lazy-load-global-keys
+;; '(
+;;     ("C-x d" . dirvish)
+;;     ;; ([f8] . +dirvish-side-current-path)
+;;     )
+;;     "init-dirvish")
 
 (lazy-load-global-keys
     '(
